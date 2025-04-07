@@ -5,6 +5,6 @@ Pillow
 jsonschema
 pytest
 setuptools
-pillow
 colour
 noise
+pylint
