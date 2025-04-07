@@ -4,6 +4,27 @@ from dungeon_generator.elements import DoorType
 
 @dataclass
 class DungeonStyle:
+    """
+    A configuration class that defines the visual style of the dungeon rendering.
+
+    This class contains color definitions for various dungeon elements such as floor,
+    walls, doors, and water. It also sets up color mappings used during rendering
+    to style doors and their frames based on their type.
+
+    Attributes:
+        paper_color (Color): The background color for areas outside the dungeon.
+        ink_color (Color): The primary color for outlines, text, and decorative elements.
+        water_color (Color): The fill color for water areas (not currently used).
+        wood_color (Color): The color used for wooden doors and accents.
+        stone_color (Color): The base color for walls and stone doors.
+        glass_color (Color): The color used for glass doors.
+        metal_color (Color): The color used for metallic doors.
+        floor_color (Color): The color of walkable dungeon tiles.
+        wall_color (Color): The default wall color, set to stone_color.
+        door_colors (dict): Maps DoorType to their visual fill color.
+        frame_colors (dict): Maps DoorType to the color of their frame.
+    """
+
     # Materials
     paper_color: Color = field(default_factory=lambda: Color("#E5E2CF"))   # Background (non-tile area)
     ink_color: Color = field(default_factory=lambda: Color("#2C241D"))     # Reserved for text/labels
@@ -22,6 +43,13 @@ class DungeonStyle:
     frame_colors: dict = field(init=False)
 
     def __post_init__(self):
+        """
+        Initializes derived attributes after the dataclass is constructed.
+
+        Sets the wall color to match the stone color, and defines the color
+        mappings for door fills and frames based on the DoorType enum.
+        """
+
         # Use the stone_color for walls by default
         self.wall_color = self.stone_color
 

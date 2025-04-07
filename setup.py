@@ -1,3 +1,9 @@
+"""
+Setup Module for Dungeon Generator
+
+This module contains the setup configuration for packaging the Dungeon Generator project.
+"""
+
 from setuptools import setup, find_packages
 
 setup(

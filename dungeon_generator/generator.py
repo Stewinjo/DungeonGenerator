@@ -1,9 +1,26 @@
+
+"""
+Dungeon Generation Module
+
+This module contains functions to procedurally generate grid-based dungeons.
+"""
+
 from .dungeon import Dungeon
 from .elements import WallSegment, DoorType
 from .utils import generate_room_walls_with_door_gaps
 
-
 def generate_basic_dungeon(width: int, height: int, seed: str = "") -> Dungeon:
+    """
+    Generate a basic dungeon layout with the specified width and height.
+
+    Args:
+        width (int): The width of the dungeon grid.
+        height (int): The height of the dungeon grid.
+
+    Returns:
+        Dungeon: An instance representing the generated dungeon.
+    """
+
     dungeon = Dungeon(width, height)
 
     # Calculate room sizes

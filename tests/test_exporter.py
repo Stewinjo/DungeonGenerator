@@ -1,11 +1,25 @@
+"""
+Unit Tests for Dungeon Generator
+
+This module contains unit tests for the dungeon generation functions.
+"""
+
 import unittest
 import os
 from dungeon_generator.generator import generate_basic_dungeon
 from dungeon_generator.exporter import export_to_foundry_scene
-from dungeon_generator.renderer import render_dungeon
+from dungeon_generator.renderer import render_dungeon, TILE_SIZE
 
 class TestDungeonExporter(unittest.TestCase):
+    """
+    Test cases for the dungeon generation functions.
+    """
+
     def test_export_to_foundry(self):
+        """
+        Test exporting the dungeon to a Foundry VTT scene JSON file.
+        """
+
         dungeon = generate_basic_dungeon(20, 20)
         render_dungeon(dungeon)
 
@@ -18,7 +32,6 @@ class TestDungeonExporter(unittest.TestCase):
         render_dungeon(dungeon).save(img_path)
 
         # Export scene JSON
-        from dungeon_generator.renderer import TILE_SIZE
         walls = [w.to_foundry_dict() for w in dungeon.walls]
         lights = [l.to_foundry_dict() for l in dungeon.lights]
         notes = [n.to_foundry_dict() for n in dungeon.notes]

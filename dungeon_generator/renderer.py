@@ -1,7 +1,14 @@
-import random, math
+"""
+Dungeon Rendering Module
+
+This module provides functions to render dungeon layouts into images.
+"""
+
+import random
+import math
+from enum import Enum
 from noise import pnoise2
 from PIL import Image, ImageDraw
-from enum import Enum
 from .dungeon import Dungeon
 from .style import DungeonStyle
 from .elements import WallSegment
@@ -17,11 +24,19 @@ BRICK_MIN_HEIGHT = FRAME_SIZE * 2 + 10
 BRICK_MAX_HEIGHT = BRICK_MIN_HEIGHT + 20
 
 class AgingLevel(Enum):
+    """
+    Enum representing the level of visual aging effects applied to a dungeon.
+    """
+
     FEW = 1
     NORMAL = 2
     MANY = 3
 
 def draw_floor_tiles(draw: ImageDraw.ImageDraw, dungeon: Dungeon, style: DungeonStyle):
+    """
+    Draws the dungeon's floor tiles and a thin black grid around walkable tiles.
+    """
+
     for y in range(dungeon.height):
         for x in range(dungeon.width):
             if dungeon.grid[y][x] != 1:
@@ -56,6 +71,10 @@ def draw_floor_tiles(draw: ImageDraw.ImageDraw, dungeon: Dungeon, style: Dungeon
 
 
 def draw_door(draw: ImageDraw.ImageDraw, wall: WallSegment, style: DungeonStyle):
+    """
+    Draws a door segment with colored door and frame, including ink outline.
+    """
+
     x1, y1, x2, y2 = wall.to_pixel_coords(TILE_SIZE)
     center_x = (x1 + x2) / 2
     center_y = (y1 + y2) / 2
@@ -116,6 +135,10 @@ def draw_door(draw: ImageDraw.ImageDraw, wall: WallSegment, style: DungeonStyle)
         )
 
 def draw_wall_block_ring(draw: ImageDraw.ImageDraw, wall: WallSegment, style: DungeonStyle, seed: int = 0):
+    """
+    Draws a series of overlapping rectangular bricks along a wall to simulate rough stonework.
+    """
+
     x1, y1, x2, y2 = wall.to_pixel_coords(TILE_SIZE)
 
     dx = x2 - x1
@@ -143,10 +166,18 @@ def draw_wall_block_ring(draw: ImageDraw.ImageDraw, wall: WallSegment, style: Du
         dist_covered += width * 0.6  # ensures overlap even for smallest bricks
 
 def draw_wall_segment(draw: ImageDraw.ImageDraw, wall: WallSegment, style: DungeonStyle):
+    """
+    Draws a basic straight wall segment using a thick ink line.
+    """
+
     x1, y1, x2, y2 = wall.to_pixel_coords(TILE_SIZE)
     draw.line([x1, y1, x2, y2], fill=style.ink_color.get_hex_l(), width=WALL_THICKNESS)
 
 def draw_pebbles(draw: ImageDraw.ImageDraw, dungeon: Dungeon, style: DungeonStyle, seed: int = 0):
+    """
+    Draws randomly placed pebbles or irregular stones on walkable floor tiles using Perlin noise.
+    """
+
     scale = 0.9
     threshold = 0.4
     rng = random.Random(seed)
@@ -183,6 +214,11 @@ def draw_pebbles(draw: ImageDraw.ImageDraw, dungeon: Dungeon, style: DungeonStyl
                         draw.ellipse([px - r, py - r, px + r, py + r], fill=style.ink_color.get_hex_l())
 
 def draw_cracks(draw: ImageDraw.ImageDraw, dungeon: Dungeon, style: DungeonStyle, seed: int = 0, aging: AgingLevel = AgingLevel.NORMAL):
+    """
+    Draws cracks that radiate from the edge of wall segments onto adjacent floor tiles,
+    with aging level controlling the density.
+    """
+
     rng = random.Random(seed + 1337)
 
     aging_map = {
@@ -253,6 +289,19 @@ def draw_cracks(draw: ImageDraw.ImageDraw, dungeon: Dungeon, style: DungeonStyle
                 draw.line([(bx, by), (bx2, by2)], fill=style.ink_color.get_hex_l(), width=1)
 
 def render_dungeon(dungeon: Dungeon, style: DungeonStyle = DungeonStyle(), seed: int = 0, aging: AgingLevel = AgingLevel.NORMAL):
+    """
+    Render the given dungeon as an image using the specified style.
+
+    Args:
+        dungeon (Dungeon): The dungeon instance to render.
+        style (DungeonStyle, optional): The style settings for rendering. Defaults to DungeonStyle().
+        seed (int, optional): Seed for random number generation to ensure reproducibility. Defaults to 0.
+        aging (AgingLevel, optional): Level of aging effects to apply. Defaults to AgingLevel.NORMAL.
+
+    Returns:
+        Image: A PIL Image object representing the rendered dungeon.
+    """
+
     width_px = dungeon.width * TILE_SIZE
     height_px = dungeon.height * TILE_SIZE
     image = Image.new("RGB", (width_px, height_px), color=style.paper_color.get_hex_l())

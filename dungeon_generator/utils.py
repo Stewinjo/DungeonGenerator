@@ -1,18 +1,33 @@
-from dungeon_generator.elements import WallSegment
-from typing import List, Tuple, Set
+"""
+Utility Functions for Dungeon Wall Generation
 
+This module provides helper functions used in dungeon generation, such as building
+room perimeters with intelligent wall placement around door openings.
+"""
+
+from typing import List, Tuple, Set
+from dungeon_generator.elements import WallSegment
 
 def generate_room_walls_with_door_gaps(
     x1: int, y1: int, x2: int, y2: int,
     door_coords: Set[Tuple[int, int]]
 ) -> List[WallSegment]:
     """
-    Builds a perimeter of wall segments for a rectangular room, skipping
-    segments where doors intersect (by cell edge midpoint).
+    Generate wall segments for the perimeter of a rectangular room,
+    skipping walls where doors are placed.
 
-    x1, y1: top-left corner (inclusive)
-    x2, y2: bottom-right corner (exclusive)
-    door_coords: set of (x, y) grid points where a door is centered
+    This function creates a complete rectangular border using `WallSegment`s except where
+    door coordinates are provided, in which case the wall segment is omitted.
+
+    Args:
+        x1 (int): Left X coordinate of the room (inclusive).
+        y1 (int): Top Y coordinate of the room (inclusive).
+        x2 (int): Right X coordinate of the room (exclusive).
+        y2 (int): Bottom Y coordinate of the room (exclusive).
+        door_coords (Set[Tuple[int, int]]): A set of (x, y) tile coordinates representing door positions.
+
+    Returns:
+        List[WallSegment]: A list of `WallSegment` instances forming the room's outer walls with gaps for doors.
     """
     walls = []
 

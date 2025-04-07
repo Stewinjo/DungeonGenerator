@@ -1,3 +1,9 @@
+"""
+Dungeon Exporting Module
+
+This module contains functions to export dungeon data to various formats.
+"""
+
 import json
 import os
 from typing import List, Dict, Any
@@ -19,20 +25,24 @@ def export_to_foundry_scene(
     output_path: str = "foundry_scene.json"
 ):
     """
-    Exports a Foundry VTT scene JSON using provided dungeon data.
+    Export the dungeon layout to a Foundry VTT scene JSON file.
 
-    Parameters:
-    - scene_name: Name of the scene
-    - background_image_path: Path to the background PNG
-    - width, height: Dimensions of the scene canvas
-    - grid_size: Pixel size of one grid square
-    - walls, lights, notes, tiles, sounds: Lists of respective objects
-    - output_path: File to write the exported scene JSON
+    Args:
+        scene_name (str): Name of the scene.
+        background_image_path (str): Path to the background image file.
+        width (int): Width of the scene in pixels.
+        height (int): Height of the scene in pixels.
+        grid_size (int): Size of the grid squares in pixels.
+        walls (list): List of wall definitions.
+        lights (list): List of light sources.
+        notes (list): List of notes.
+        tiles (list): List of tiles.
+        output_path (str): Path to save the exported JSON file.
     """
 
     if not os.path.exists(background_image_path):
         print("[i] No image found, generating one...")
-        render_dungeon(Dungeon, output_path=background_image_path)
+        render_dungeon(Dungeon)
 
     scene = {
         "name": scene_name,
