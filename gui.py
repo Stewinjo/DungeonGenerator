@@ -7,13 +7,16 @@ for generating, previewing, and exporting procedural dungeons using tkinter.
 
 import os
 import tkinter as tk
+import uuid
 from tkinter import ttk
 from tkinter import filedialog
 from PIL import Image, ImageTk
+from collections import defaultdict
 
 from dungeon_generator.renderer import render_dungeon, TILE_SIZE
-from dungeon_generator.exporter import export_to_foundry_scene
-from dungeon_generator.generator import generate_basic_dungeon
+from dungeon_generator.exporter import DungeonExporter
+from dungeon_generator.generator import generate_dungeon, GenerationSettings
+from dungeon_generator.enums import GenerationTag
 
 class DungeonApp:
     """
@@ -27,6 +30,23 @@ class DungeonApp:
         self.root = root
         self.root.title("Dungeon Generator")
         self.root.geometry("1200x800")  # width x height in pixels
+
+        # Pre-declare variables before any init function uses them
+        self.seed_entry = None
+        self.width_entry = None
+        self.height_entry = None
+        self.generate_button = None
+        self.canvas = None
+        self.h_scroll = None
+        self.v_scroll = None
+        self.zoom_level = 1.0
+        self._pan_start = None
+        self.rendered_image = None
+        self.rendered_pil_image = None
+        self.dungeon = None
+        self.tooltip = None
+        self.active_tags = set()
+        self.tag_buttons = {}
 
         # === Main layout frames ===
         self.navbar = ttk.Frame(root)
@@ -44,20 +64,6 @@ class DungeonApp:
         self._init_toolbar()
         self._init_viewport()
 
-        self.seed_entry = None
-        self.width_entry = None
-        self.height_entry = None
-        self.generate_button = None
-        self.canvas = None
-        self.h_scroll = None
-        self.v_scroll = None
-        self.zoom_level = 1.0
-        self._pan_start = None
-        self.rendered_image = None
-        self.rendered_pil_image = None
-        self.dungeon = None
-        self.tooltip = None
-
     def _init_navbar(self):
         """Initializes the top navigation bar including export and exit buttons."""
 
@@ -73,13 +79,13 @@ class DungeonApp:
         export_menu.pack(side="left", padx=5, pady=5)
 
         # Add tooltip manually using a simple hover event
-        def on_enter():
+        def on_enter(event):
             self._show_tooltip(
                 export_menu,
                 "Exporting to Universal will not include all functionality."
-                )
+            )
 
-        def on_leave():
+        def on_leave(event):
             self._hide_tooltip()
 
         export_menu.bind("<Enter>", on_enter)
@@ -90,30 +96,65 @@ class DungeonApp:
         exit_btn.pack(side="right", padx=5, pady=5)
 
     def _init_toolbar(self):
-        """Initializes the left toolbar with inputs for seed, width, height, and generate button."""
+        """Initializes the left toolbar with inputs for seed, size, tags, and generate button."""
 
-        ttk.Label(self.toolbar, text="Seed:").pack(pady=(10, 0))
+        self.toolbar.columnconfigure(1, weight=1)
+
+        # Seed row
+        ttk.Label(self.toolbar, text="Seed:").grid(row=0, column=0, sticky="w", padx=5, pady=5)
         self.seed_entry = ttk.Entry(self.toolbar)
-        self.seed_entry.pack(pady=5)
+        self.seed_entry.insert(0, str(uuid.uuid4().hex[:8]))
+        self.seed_entry.grid(row=0, column=1, sticky="ew", padx=5, pady=5)
+        reroll_button = ttk.Button(self.toolbar, text="🔁", width=3, command=self._reroll_seed)
+        reroll_button.grid(row=0, column=2, padx=5)
 
-        ttk.Label(self.toolbar, text="Width:").pack(pady=(10, 0))
+        # Width row
+        ttk.Label(self.toolbar, text="Width:").grid(row=1, column=0, sticky="w", padx=5, pady=5)
         self.width_entry = ttk.Entry(self.toolbar)
-        self.width_entry.insert(0, "20")
-        self.width_entry.pack(pady=5)
+        self.width_entry.insert(0, "40")
+        self.width_entry.grid(row=1, column=1, columnspan=2, sticky="ew", padx=5, pady=5)
 
-        ttk.Label(self.toolbar, text="Height:").pack(pady=(10, 0))
+        # Height row
+        ttk.Label(self.toolbar, text="Height:").grid(row=2, column=0, sticky="w", padx=5, pady=5)
         self.height_entry = ttk.Entry(self.toolbar)
-        self.height_entry.insert(0, "20")
-        self.height_entry.pack(pady=5)
+        self.height_entry.insert(0, "40")
+        self.height_entry.grid(row=2, column=1, columnspan=2, sticky="ew", padx=5, pady=5)
 
-        self.generate_button = ttk.Button(
-            self.toolbar, text="Generate",
-            command=self.generate_dungeon
-            )
-        self.generate_button.pack(pady=20)
+        # Define a style for selected tags
+        style = ttk.Style()
+        style.configure("Selected.TButton", background="grey", foreground="black")
 
-        # Bind Enter key to generate
+        # Group tags by category
+        tag_groups = defaultdict(list)
+        for tag in GenerationTag:
+            tag_groups[tag.category].append(tag)
+
+        current_row = 3
+
+        # Create tag sections, grouped by category
+        for category, tags in tag_groups.items():
+            ttk.Label(self.toolbar, text=category).grid(row=current_row, column=0, columnspan=3, sticky="w", padx=5, pady=(10, 2))
+            current_row += 1
+
+            for i, tag in enumerate(tags):
+                row = current_row + (i // 3)
+                col = i % 3
+                btn = ttk.Button(self.toolbar, text=tag.name.replace("_", " ").title(), command=lambda t=tag: self.toggle_tag(t))
+                btn.grid(row=row, column=col, padx=2, pady=2, sticky="ew")
+                self.tag_buttons[tag] = btn
+
+            current_row += (len(tags) + 2) // 3  # account for used rows
+
+        # Generate button
+        self.generate_button = ttk.Button(self.toolbar, text="Generate", command=self.generate_dungeon)
+        self.generate_button.grid(row=current_row, column=0, columnspan=3, pady=20)
+
         self.root.bind("<Return>", lambda event: self.generate_dungeon())
+
+    def _reroll_seed(self):
+        new_seed = uuid.uuid4().hex[:8]
+        self.seed_entry.delete(0, tk.END)
+        self.seed_entry.insert(0, new_seed)
 
     def _init_viewport(self):
         """Initializes the central canvas area with zoom, pan, and scroll functionality."""
@@ -166,19 +207,18 @@ class DungeonApp:
             print("[!] Invalid input")
             return
 
-        self.dungeon = generate_basic_dungeon(width, height, seed)
-
+        settings = GenerationSettings.from_gui(width, height, seed, list(self.active_tags))
+        self.dungeon = generate_dungeon(width, height, settings)
         self.rendered_pil_image = render_dungeon(self.dungeon)
 
-        # Auto zoom-out to fit if needed
         img_w, img_h = self.rendered_pil_image.size
         canvas_w = self.canvas.winfo_width()
         canvas_h = self.canvas.winfo_height()
 
-        if canvas_w > 1 and canvas_h > 1:  # avoid 0 during startup
+        if canvas_w > 1 and canvas_h > 1:
             scale_x = canvas_w / img_w
             scale_y = canvas_h / img_h
-            fit_zoom = min(scale_x, scale_y, 1.0)  # only zoom out, never in
+            fit_zoom = min(scale_x, scale_y, 1.0)
             self.zoom_level = fit_zoom
 
         self.display_image(self.rendered_pil_image)
@@ -225,40 +265,16 @@ class DungeonApp:
     def export_to_foundry(self):
         """Exports the current dungeon and rendered image to Foundry VTT format."""
 
-        if not hasattr(self, "dungeon") or not hasattr(self, "rendered_pil_image"):
-            print("[!] No dungeon or image to export.")
+        if not hasattr(self, "dungeon"):
+            print("[!] No dungeon to export.")
             return
 
         folder = filedialog.askdirectory(title="Select export folder")
         if not folder:
             return  # Cancelled
 
-        # File paths
-        img_path = os.path.join(folder, "dungeon.png")
-        json_path = os.path.join(folder, "dungeon.scene.json")
-
-        # Save image
-        self.rendered_pil_image.save(img_path)
-        print(f"[✓] Image saved to {img_path}")
-
-        # Export scene JSON
-        walls = [w.to_foundry_dict() for w in self.dungeon.walls]
-        lights = [l.to_foundry_dict() for l in self.dungeon.lights]
-        notes = [n.to_foundry_dict() for n in self.dungeon.notes]
-        tiles = [t.to_foundry_dict() for t in self.dungeon.tiles]
-
-        export_to_foundry_scene(
-            scene_name="My Dungeon",
-            background_image_path=os.path.basename(img_path),  # relative path
-            width=self.dungeon.width * TILE_SIZE,
-            height=self.dungeon.height * TILE_SIZE,
-            grid_size=TILE_SIZE,
-            walls=walls,
-            lights=lights,
-            notes=notes,
-            tiles=tiles,
-            output_path=json_path
-        )
+        dungeon_exporter = DungeonExporter(self.dungeon)
+        dungeon_exporter.export_to_foundry_scene(folder)
 
     def _show_tooltip(self, widget, text):
         """
@@ -355,7 +371,25 @@ class DungeonApp:
         # Update pan start position
         self._pan_start = (self.canvas.canvasx(event.x), self.canvas.canvasy(event.y))
 
-    def _on_canvas_resize(self):
+    def toggle_tag(self, tag: GenerationTag):
+        """
+        Toggles a generation tag and updates visual state.
+        Handles mutually exclusive tag groups.
+        """
+        self.active_tags = GenerationTag.toggle_tag(self.active_tags, tag)
+        self._update_tag_button_states()
+
+    def _update_tag_button_states(self):
+        """
+        Updates the appearance of tag buttons based on active tag state.
+        """
+        for tag, btn in self.tag_buttons.items():
+            if tag in self.active_tags:
+                btn.config(style="Selected.TButton")
+            else:
+                btn.config(style="TButton")
+
+    def _on_canvas_resize(self, event):
         """
         Re-renders the dungeon image when the canvas is resized.
 
@@ -367,6 +401,6 @@ class DungeonApp:
             self.display_image(self.rendered_pil_image)
 
 if __name__ == "__main__":
-    tk_root  = tk.Tk()
+    tk_root = tk.Tk()
     app = DungeonApp(tk_root )
-    tk_root .mainloop()
+    tk_root.mainloop()

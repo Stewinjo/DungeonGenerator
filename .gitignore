@@ -9,8 +9,14 @@ env/
 venv/
 ENV/
 
-# VS Code settings
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# VS-Code
 .vscode/
+*.code-workspace
 
 # Pytest cache
 .pytest_cache/
@@ -22,3 +28,6 @@ dist/
 
 # macOS
 .DS_Store
+
+# Test folders
+.test_export

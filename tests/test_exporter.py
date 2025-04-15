@@ -1,59 +1,45 @@
-"""
-Unit Tests for Dungeon Generator
-
-This module contains unit tests for the dungeon generation functions.
-"""
-
 import unittest
 import os
-from dungeon_generator.generator import generate_basic_dungeon
-from dungeon_generator.exporter import export_to_foundry_scene
-from dungeon_generator.renderer import render_dungeon, TILE_SIZE
+import uuid
+from dungeon_generator.generator import generate_dungeon, GenerationSettings
+from dungeon_generator.enums import GenerationTag
+from dungeon_generator.exporter import DungeonExporter
+from dungeon_generator.renderer import TILE_SIZE
 
 class TestDungeonExporter(unittest.TestCase):
     """
-    Test cases for the dungeon generation functions.
+    Test exporting a dungeon to Foundry VTT format using DungeonExporter.
     """
 
     def test_export_to_foundry(self):
         """
-        Test exporting the dungeon to a Foundry VTT scene JSON file.
+        Generate a dungeon and test exporting the scene and image files.
         """
+        # Setup export folder
+        export_folder = "./.test_export"
+        os.makedirs(export_folder, exist_ok=True)
 
-        dungeon = generate_basic_dungeon(20, 20)
-        render_dungeon(dungeon)
+        # Generate dungeon with dummy settings
+        width = 20
+        height = 20
+        seed = uuid.uuid4().hex[:8]
+        tags = GenerationTag.make_full_set()
+        settings = GenerationSettings.from_gui(width, height, seed, tags)
+        dungeon = generate_dungeon(width, height, settings)
+        dungeon.name = "TestDungeon"
 
-        # File paths
-        folder = "./"
-        img_path = os.path.join(folder, "dungeon.png")
-        json_path = os.path.join(folder, "dungeon.scene.json")
+        # Export using DungeonExporter
+        exporter = DungeonExporter(dungeon)
+        exporter.export_to_foundry_scene(export_folder)
 
-        # Save image
-        render_dungeon(dungeon).save(img_path)
+        # Check outputs
+        image_path = os.path.join(export_folder, "TestDungeon.png")
+        json_path = os.path.join(export_folder, "TestDungeon_scene.json")
 
-        # Export scene JSON
-        walls = [w.to_foundry_dict() for w in dungeon.walls]
-        lights = [l.to_foundry_dict() for l in dungeon.lights]
-        notes = [n.to_foundry_dict() for n in dungeon.notes]
-        tiles = [t.to_foundry_dict() for t in dungeon.tiles]
-
-        export_to_foundry_scene(
-            scene_name="Test Dungeon",
-            background_image_path=os.path.basename(img_path),  # relative path
-            width=dungeon.width * TILE_SIZE,
-            height=dungeon.height * TILE_SIZE,
-            grid_size=TILE_SIZE,
-            walls=walls,
-            lights=lights,
-            notes=notes,
-            tiles=tiles,
-            output_path=json_path
-        )
-
-        # Assertions
-        self.assertTrue(os.path.exists(img_path))
-        self.assertTrue(os.path.exists(json_path))
+        self.assertTrue(os.path.exists(image_path), f"Missing dungeon image: {image_path}")
+        self.assertTrue(os.path.exists(json_path), f"Missing dungeon scene JSON: {json_path}")
 
         # Cleanup
-        os.remove(img_path)
+        os.remove(image_path)
         os.remove(json_path)
+        os.rmdir(export_folder)

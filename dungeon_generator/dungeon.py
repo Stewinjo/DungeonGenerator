@@ -9,7 +9,7 @@ The dungeon is designed to support rendering, export, and dynamic procedural gen
 """
 
 from typing import List
-from .elements import WallSegment, Light, Note, Tile
+from .elements import WallSegment, Light, Note, Tile, Door
 
 
 class Dungeon:
@@ -37,12 +37,14 @@ class Dungeon:
 
         self.width = width
         self.height = height
+        self.name = "Dungeon"
 
         # Grid: 2D array where 1 = walkable (floor), 0 = solid (wall/void)
         self.grid: List[List[int]] = [[0 for _ in range(width)] for _ in range(height)]
 
         # Dungeon elements
         self.walls: List[WallSegment] = []
+        self.doors: List[Door] = []
         self.lights: List[Light] = []
         self.notes: List[Note] = []
         self.tiles: List[Tile] = []
@@ -62,3 +64,37 @@ class Dungeon:
             for x in range(x1, x2):
                 if 0 <= x < self.width and 0 <= y < self.height:
                     self.grid[y][x] = 1
+
+    def carve_tile(self, x: int, y: int):
+        """
+        Carve a single tile, marking it as walkable (1) if within bounds.
+
+        Args:
+            x (int): X-coordinate of the tile.
+            y (int): Y-coordinate of the tile.
+        """
+        if 0 <= x < self.width and 0 <= y < self.height:
+            self.grid[y][x] = 1
+
+    def carve_line(self, x1: int, y1: int, x2: int, y2: int):
+        """
+        Carves a straight horizontal or vertical path between two points.
+
+        Args:
+            x1 (int): Starting X coordinate.
+            y1 (int): Starting Y coordinate.
+            x2 (int): Ending X coordinate.
+            y2 (int): Ending Y coordinate.
+        """
+        if x1 == x2:
+            # Vertical line
+            start, end = sorted([y1, y2])
+            for y in range(start, end + 1):
+                self.carve_tile(x1, y)
+        elif y1 == y2:
+            # Horizontal line
+            start, end = sorted([x1, x2])
+            for x in range(start, end + 1):
+                self.carve_tile(x, y1)
+        else:
+            raise ValueError("Only horizontal or vertical lines are supported")

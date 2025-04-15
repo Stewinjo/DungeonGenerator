@@ -6,12 +6,12 @@ This module provides functions to render dungeon layouts into images.
 
 import random
 import math
-from enum import Enum
 from noise import pnoise2
 from PIL import Image, ImageDraw
+from .enums import AgingLevel
 from .dungeon import Dungeon
 from .style import DungeonStyle
-from .elements import WallSegment
+from .elements import WallSegment, Door
 
 TILE_SIZE = 100
 WALL_THICKNESS = 5
@@ -23,14 +23,6 @@ BRICK_MAX_WIDTH = BRICK_MIN_WIDTH + 20
 BRICK_MIN_HEIGHT = FRAME_SIZE * 2 + 10
 BRICK_MAX_HEIGHT = BRICK_MIN_HEIGHT + 20
 
-class AgingLevel(Enum):
-    """
-    Enum representing the level of visual aging effects applied to a dungeon.
-    """
-
-    FEW = 1
-    NORMAL = 2
-    MANY = 3
 
 def draw_floor_tiles(draw: ImageDraw.ImageDraw, dungeon: Dungeon, style: DungeonStyle):
     """
@@ -70,19 +62,20 @@ def draw_floor_tiles(draw: ImageDraw.ImageDraw, dungeon: Dungeon, style: Dungeon
                     draw.line([(x2, y1), (x2, y2)], fill=style.ink_color.get_hex_l(), width=1)
 
 
-def draw_door(draw: ImageDraw.ImageDraw, wall: WallSegment, style: DungeonStyle):
+def draw_door(draw: ImageDraw.ImageDraw, door: Door, style: DungeonStyle):
     """
     Draws a door segment with colored door and frame, including ink outline.
     """
 
-    x1, y1, x2, y2 = wall.to_pixel_coords(TILE_SIZE)
+    wall_segment: WallSegment = door.door_to_wall()
+    x1, y1, x2, y2 = wall_segment.to_pixel_coords(TILE_SIZE)
     center_x = (x1 + x2) / 2
     center_y = (y1 + y2) / 2
 
     dx = abs(x2 - x1)
     dy = abs(y2 - y1)
 
-    door_type = wall.door_type
+    door_type = wall_segment.door_type
     door_color = style.door_colors.get(door_type, style.wood_color)
     frame_color = style.frame_colors.get(door_type, style.stone_color)
 
@@ -307,20 +300,12 @@ def render_dungeon(dungeon: Dungeon, style: DungeonStyle = DungeonStyle(), seed:
     image = Image.new("RGB", (width_px, height_px), color=style.paper_color.get_hex_l())
     draw = ImageDraw.Draw(image)
 
-    local_doors = []
-    local_walls = []
-
-
-    # Draw cosmetic stone-blocks/bricks and seperates WallSegments into walls and doors
+    # Draw cosmetic stone-blocks/bricks and separetes WallSegments
     for wall in dungeon.walls:
-        if wall.door == 0:
-            draw_wall_block_ring(draw, wall, style)
-            local_walls.append(wall)
-        else:
-            local_doors.append(wall)
+        draw_wall_block_ring(draw, wall, style)
 
     # Draw simple wall outlines
-    for wall in local_walls:
+    for wall in dungeon.walls:
         draw_wall_segment(draw, wall, style)
 
     # Draw floor and its cosmetics
@@ -329,7 +314,7 @@ def render_dungeon(dungeon: Dungeon, style: DungeonStyle = DungeonStyle(), seed:
     draw_cracks(draw, dungeon, style, seed, aging)
 
     # Draw doors
-    for door in local_doors:
+    for door in dungeon.doors:
         draw_door(draw, door, style)
 
     return image
