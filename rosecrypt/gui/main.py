@@ -1,32 +1,49 @@
 """
-Dungeon Generator GUI
+main.py
 
-This module defines the DungeonApp class, which provides a graphical user interface
-for generating, previewing, and exporting procedural dungeons using tkinter.
+Graphical user interface for the Rosecrypt Dungeon Generator.
+
+This module defines the `DungeonApp` class, which provides an interactive Tkinter-based GUI
+for generating, previewing, and exporting procedural dungeons. It integrates with the
+rendering, generation, and exporting subsystems,
+offering a visual front end to the Rosecrypt engine.
 """
 
-import os
 import tkinter as tk
 import uuid
+from collections import defaultdict
 from tkinter import ttk
 from tkinter import filedialog
 from PIL import Image, ImageTk
-from collections import defaultdict
 
-from dungeon_generator.renderer import render_dungeon, TILE_SIZE
-from dungeon_generator.exporter import DungeonExporter
-from dungeon_generator.generator import generate_dungeon, GenerationSettings
-from dungeon_generator.enums import GenerationTag
+
+from rosecrypt.rendering.dungeon_renderer import DungeonRenderer
+from rosecrypt.rendering.rendering_settings import RenderingSettings
+from rosecrypt.rendering.enums.rendering_tag import RenderingTag
+from rosecrypt.generation.dungeon_generator import DungeonGenerator
+from rosecrypt.generation.generation_settings import GenerationSettings
+from rosecrypt.generation.enums.generation_tag import GenerationTag
+from rosecrypt.exporting.dungeon_exporter import DungeonExporter
+from rosecrypt.exporting.exporter_settings import ExporterSettings
 
 class DungeonApp:
     """
-    GUI Application for generating and visualizing dungeons.
+    Main application window for the Rosecrypt Dungeon Generator GUI.
 
-    This app provides controls for setting dungeon size and seed, rendering it using
-    PIL, zooming and panning around the image, and exporting to Foundry VTT format.
+    Provides an interface for dungeon generation settings, rendering preview,
+    and exporting to virtual tabletop formats.
+
+    :param root: The root Tkinter window instance.
+    :type root: tk.Tk
     """
 
     def __init__(self, root):
+        """
+        Initialize the main GUI application and layout.
+
+        :param root: The Tkinter root window.
+        :type root: tk.Tk
+        """
         self.root = root
         self.root.title("Dungeon Generator")
         self.root.geometry("1200x800")  # width x height in pixels
@@ -65,13 +82,16 @@ class DungeonApp:
         self._init_viewport()
 
     def _init_navbar(self):
-        """Initializes the top navigation bar including export and exit buttons."""
+        """
+        Initializes the top navigation bar, including export dropdown
+        and an exit button.
+        """
 
         # Dropdown-style export menu
         export_menu = tk.Menubutton(self.navbar, text="Export", relief=tk.RAISED)
         export_dropdown = tk.Menu(export_menu, tearoff=0)
 
-        export_dropdown.add_command(label="Export to Foundry", command=self.export_to_foundry)
+        export_dropdown.add_command(label="Export to Foundry", command=self._export_to_foundry)
 
         # Add disabled Universal option with a tooltip
         export_dropdown.add_command(label="Export to Universal VTT", state="disabled")
@@ -80,13 +100,15 @@ class DungeonApp:
 
         # Add tooltip manually using a simple hover event
         def on_enter(event):
-            self._show_tooltip(
+            # pylint: disable=unused-argument
+            self.__show_tooltip(
                 export_menu,
                 "Exporting to Universal will not include all functionality."
             )
 
         def on_leave(event):
-            self._hide_tooltip()
+            # pylint: disable=unused-argument
+            self.__hide_tooltip()
 
         export_menu.bind("<Enter>", on_enter)
         export_menu.bind("<Leave>", on_leave)
@@ -96,7 +118,10 @@ class DungeonApp:
         exit_btn.pack(side="right", padx=5, pady=5)
 
     def _init_toolbar(self):
-        """Initializes the left toolbar with inputs for seed, size, tags, and generate button."""
+        """
+        Initializes the sidebar toolbar, including inputs for seed,
+        width, height, and category-tagged generation options.
+        """
 
         self.toolbar.columnconfigure(1, weight=1)
 
@@ -133,31 +158,50 @@ class DungeonApp:
 
         # Create tag sections, grouped by category
         for category, tags in tag_groups.items():
-            ttk.Label(self.toolbar, text=category).grid(row=current_row, column=0, columnspan=3, sticky="w", padx=5, pady=(10, 2))
+            ttk.Label(self.toolbar, text=category).grid(
+                row=current_row,
+                column=0,
+                columnspan=3,
+                sticky="w",
+                padx=5,
+                pady=(10, 2)
+                )
             current_row += 1
 
             for i, tag in enumerate(tags):
                 row = current_row + (i // 3)
                 col = i % 3
-                btn = ttk.Button(self.toolbar, text=tag.name.replace("_", " ").title(), command=lambda t=tag: self.toggle_tag(t))
+                btn = ttk.Button(
+                    self.toolbar,
+                    text=tag.name.replace("_", " ").title(),
+                    command=lambda t=tag: self.__toggle_tag(t)
+                    )
                 btn.grid(row=row, column=col, padx=2, pady=2, sticky="ew")
                 self.tag_buttons[tag] = btn
 
             current_row += (len(tags) + 2) // 3  # account for used rows
 
         # Generate button
-        self.generate_button = ttk.Button(self.toolbar, text="Generate", command=self.generate_dungeon)
+        self.generate_button = ttk.Button(
+            self.toolbar,
+            text="Generate",
+            command=self._generate_dungeon
+            )
         self.generate_button.grid(row=current_row, column=0, columnspan=3, pady=20)
 
-        self.root.bind("<Return>", lambda event: self.generate_dungeon())
+        self.root.bind("<Return>", lambda event: self._generate_dungeon())
 
     def _reroll_seed(self):
+        """Generates a new random seed and populates the seed entry widget."""
         new_seed = uuid.uuid4().hex[:8]
         self.seed_entry.delete(0, tk.END)
         self.seed_entry.insert(0, new_seed)
 
     def _init_viewport(self):
-        """Initializes the central canvas area with zoom, pan, and scroll functionality."""
+        """
+        Initializes the central canvas viewport used for dungeon rendering.
+        Includes scrollbars and canvas zoom/pan bindings.
+        """
 
         # Frame to hold canvas + scrollbars
         self.viewport_canvas_frame = ttk.Frame(self.viewport)
@@ -196,8 +240,11 @@ class DungeonApp:
         self.canvas.bind("<Button-4>", self._on_zoom)  # Linux scroll up
         self.canvas.bind("<Button-5>", self._on_zoom)  # Linux scroll down
 
-    def generate_dungeon(self):
-        """Generates and renders a new dungeon using input parameters from the toolbar."""
+    def _generate_dungeon(self):
+        """
+        Reads current input values and generation settings, then generates
+        and renders a dungeon instance on the canvas.
+        """
 
         try:
             width = int(self.width_entry.get())
@@ -207,9 +254,16 @@ class DungeonApp:
             print("[!] Invalid input")
             return
 
-        settings = GenerationSettings.from_gui(width, height, seed, list(self.active_tags))
-        self.dungeon = generate_dungeon(width, height, settings)
-        self.rendered_pil_image = render_dungeon(self.dungeon)
+        generation_settings = GenerationSettings.from_gui(
+            width,
+            height,
+            seed,
+            list(self.active_tags)
+            )
+        self.dungeon = DungeonGenerator(generation_settings).generate_dungeon(width, height)
+
+        rendering_settings = RenderingSettings.from_gui(seed, RenderingTag.make_full_set())
+        self.rendered_pil_image = DungeonRenderer(self.dungeon, rendering_settings).render_dungeon()
 
         img_w, img_h = self.rendered_pil_image.size
         canvas_w = self.canvas.winfo_width()
@@ -221,14 +275,14 @@ class DungeonApp:
             fit_zoom = min(scale_x, scale_y, 1.0)
             self.zoom_level = fit_zoom
 
-        self.display_image(self.rendered_pil_image)
+        self.__display_image(self.rendered_pil_image)
 
-    def display_image(self, pil_image):
+    def __display_image(self, pil_image):
         """
-        Displays a PIL image on the canvas with current zoom and centering.
+        Displays a PIL image on the canvas with zoom and centering applied.
 
-        Args:
-            pil_image (Image): The image to be displayed on the canvas.
+        :param pil_image: The rendered dungeon image.
+        :type pil_image: PIL.Image.Image
         """
 
         if not pil_image:
@@ -262,27 +316,38 @@ class DungeonApp:
 
         self.canvas.create_image(x_offset, y_offset, anchor="nw", image=self.rendered_image)
 
-    def export_to_foundry(self):
-        """Exports the current dungeon and rendered image to Foundry VTT format."""
+    def _export_to_foundry(self):
+        """
+        Exports the currently rendered dungeon to Foundry VTT format.
+        Includes a prompt for selecting an export folder.
+        """
 
         if not hasattr(self, "dungeon"):
             print("[!] No dungeon to export.")
+            return
+
+        try:
+            seed = self.seed_entry.get()
+        except ValueError:
+            print("[!] Invalid input")
             return
 
         folder = filedialog.askdirectory(title="Select export folder")
         if not folder:
             return  # Cancelled
 
-        dungeon_exporter = DungeonExporter(self.dungeon)
-        dungeon_exporter.export_to_foundry_scene(folder)
+        rendering_settings = RenderingSettings.from_gui(seed, RenderingTag.make_full_set())
+        exporter_settings = ExporterSettings.from_gui(rendering_settings)
+        DungeonExporter(self.dungeon, exporter_settings).export_to_foundry_scene(folder)
 
-    def _show_tooltip(self, widget, text):
+    def __show_tooltip(self, widget, text):
         """
         Displays a tooltip near the specified widget.
 
-        Args:
-            widget (tk.Widget): The widget to anchor the tooltip to.
-            text (str): The tooltip text.
+        :param widget: The widget to anchor the tooltip to.
+        :type widget: tk.Widget
+        :param text: The tooltip text to display.
+        :type text: str
         """
 
         x = widget.winfo_rootx() + 50
@@ -300,8 +365,8 @@ class DungeonApp:
         )
         label.pack(ipadx=1)
 
-    def _hide_tooltip(self):
-        """Hides the currently displayed tooltip if it exists."""
+    def __hide_tooltip(self):
+        """Hides the currently displayed tooltip if present."""
 
         if hasattr(self, 'tooltip'):
             self.tooltip.destroy()
@@ -309,10 +374,10 @@ class DungeonApp:
 
     def _on_zoom(self, event):
         """
-        Handles zoom in/out with mouse wheel.
+        Zooms in or out on the dungeon render based on mouse scroll input.
 
-        Args:
-            event (tk.Event): The mouse wheel event.
+        :param event: The mouse wheel scroll event.
+        :type event: tk.Event
         """
 
         if event.num == 5 or event.delta == -120:
@@ -320,27 +385,32 @@ class DungeonApp:
         elif event.num == 4 or event.delta == 120:
             self.zoom_level = min(5.0, self.zoom_level + 0.1)
 
-        self.display_image(self.rendered_pil_image)  # Re-render with new zoom
+        self.__display_image(self.rendered_pil_image)  # Re-render with new zoom
 
     def _on_pan_start(self, event):
         """
-        Records the start point of a mouse drag to pan the viewport.
+        Begins a panning operation on mouse press.
 
-        Args:
-            event (tk.Event): The mouse button press event.
+        :param event: The mouse press event.
+        :type event: tk.Event
         """
 
         self._pan_start = (self.canvas.canvasx(event.x), self.canvas.canvasy(event.y))
 
     def _on_pan_move(self, event):
         """
-        Moves the canvas view according to mouse movement.
+        Drags the image on the canvas based on mouse motion.
 
-        Args:
-            event (tk.Event): The mouse drag event.
+        :param event: The mouse drag event.
+        :type event: tk.Event
         """
 
         if self._pan_start is None:
+            return
+
+        # Skip if canvas is empty
+        bbox = self.canvas.bbox("all")
+        if not bbox:
             return
 
         # Convert mouse position to canvas coords (adjusted for zoom and scroll)
@@ -352,8 +422,7 @@ class DungeonApp:
         dx = start_x - current_x
         dy = start_y - current_y
 
-        # Get current scroll region
-        x0, y0, x1, y1 = self.canvas.bbox("all")
+        x0, y0, x1, y1 = bbox
         canvas_width = x1 - x0
         canvas_height = y1 - y0
 
@@ -371,17 +440,22 @@ class DungeonApp:
         # Update pan start position
         self._pan_start = (self.canvas.canvasx(event.x), self.canvas.canvasy(event.y))
 
-    def toggle_tag(self, tag: GenerationTag):
+
+    def __toggle_tag(self, tag: GenerationTag):
         """
-        Toggles a generation tag and updates visual state.
-        Handles mutually exclusive tag groups.
+        Toggles a generation tag from the set of active tags,
+        and updates button visuals accordingly.
+
+        :param tag: The tag to toggle.
+        :type tag: GenerationTag
         """
         self.active_tags = GenerationTag.toggle_tag(self.active_tags, tag)
-        self._update_tag_button_states()
+        self.__update_tag_button_states()
 
-    def _update_tag_button_states(self):
+    def __update_tag_button_states(self):
         """
-        Updates the appearance of tag buttons based on active tag state.
+        Updates tag button visual styles to reflect the current
+        selection state for all available generation tags.
         """
         for tag, btn in self.tag_buttons.items():
             if tag in self.active_tags:
@@ -390,17 +464,23 @@ class DungeonApp:
                 btn.config(style="TButton")
 
     def _on_canvas_resize(self, event):
+        # pylint: disable=unused-argument
         """
-        Re-renders the dungeon image when the canvas is resized.
+        Re-renders the image to maintain centering and zoom level when
+        the canvas is resized.
 
-        Args:
-            event (tk.Event): The canvas resize event.
+        :param event: The canvas resize event.
+        :type event: tk.Event
         """
 
         if hasattr(self, "rendered_pil_image"):
-            self.display_image(self.rendered_pil_image)
+            self.__display_image(self.rendered_pil_image)
 
-if __name__ == "__main__":
+def launch_gui():
+    """
+    Entry point for launching the Dungeon Generator GUI.
+    Initializes the main window and starts the Tkinter event loop.
+    """
     tk_root = tk.Tk()
-    app = DungeonApp(tk_root )
+    DungeonApp(tk_root)
     tk_root.mainloop()

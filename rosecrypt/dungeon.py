@@ -11,12 +11,13 @@ The dungeon is designed to support rendering, export, and dynamic procedural gen
 from typing import List
 from .elements import WallSegment, Light, Note, Tile, Door
 
-
+# pylint: disable=too-many-instance-attributes
 class Dungeon:
     """
     A class representing the structure and content of a dungeon.
 
     Attributes:
+        name (str): Name of this dungeon.
         width (int): Width of the dungeon grid.
         height (int): Height of the dungeon grid.
         grid (List[List[int]]): 2D grid of integers where 1 = floor, 0 = wall/void.

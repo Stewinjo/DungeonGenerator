@@ -1,27 +1,76 @@
 """
 Dungeon Exporting Module
 
-This module contains functions to export dungeon data to various formats.
+This module provides the :class:`DungeonExporter`, responsible for exporting
+generated dungeons to external formats such as Foundry VTT scene files.
+
+The export includes map images and structured JSON content to enable use
+within virtual tabletops. Wall, door, and padding metadata are formatted
+specifically for Foundry's expected scene schema.
 """
 
 import json
 import os
-from typing import List, Dict, Tuple
-from PIL import Image
-from .renderer import render_dungeon, TILE_SIZE
-from .dungeon import Dungeon
-from .elements import WallSegment, Door
+from typing import List, Tuple
+
+from rosecrypt.dungeon import Dungeon
+from rosecrypt.elements import WallSegment, Door
+from rosecrypt.logger import setup_logger
+from rosecrypt.rendering.dungeon_renderer import DungeonRenderer
+from rosecrypt.exporting.exporter_settings import ExporterSettings
+
+log = setup_logger(__name__, category="Exporting")
 
 class DungeonExporter:
-    def __init__(self, dungeon: Dungeon):
+    """
+    Exports a dungeon object into Foundry VTT-compatible formats.
+
+    :param dungeon: The dungeon to export.
+    :type dungeon: Dungeon
+    :param exporter_settings: Settings for export configuration, including rendering options.
+    :type exporter_settings: ExporterSettings
+    """
+
+    def __init__(self, dungeon: Dungeon, exporter_settings: ExporterSettings):
         self.dungeon = dungeon
+        self.exporter_settings = exporter_settings
 
     def _calculate_offset(self, grid_size: int, padding_percent: float) -> Tuple[int, int]:
-        offset_pixels = int(padding_percent * grid_size * max(self.dungeon.width, self.dungeon.height))
+        """
+        Calculates a pixel offset used for applying padding around the dungeon grid.
+
+        :param grid_size: The size of a single grid tile in pixels.
+        :type grid_size: int
+        :param padding_percent: The padding percentage (relative to grid dimensions).
+        :type padding_percent: float
+
+        :return: Tuple of (x_offset, y_offset) in pixels.
+        :rtype: Tuple[int, int]
+        """
+        offset_pixels = int(
+            padding_percent * grid_size * max(self.dungeon.width, self.dungeon.height)
+            )
         return offset_pixels, offset_pixels
 
     @staticmethod
-    def _walls_to_foundry_format(walls: List[WallSegment], grid_size: int, offset: Tuple[int, int]) -> List[dict]:
+    def _walls_to_foundry_format(
+        walls: List[WallSegment],
+        grid_size: int,
+        offset: Tuple[int, int]
+        ) -> List[dict]:
+        """
+        Converts a list of wall segments to Foundry-compatible wall dictionaries.
+
+        :param walls: List of wall segments to convert.
+        :type walls: List[WallSegment]
+        :param grid_size: Size of one tile in pixels.
+        :type grid_size: int
+        :param offset: Tuple representing x and y pixel offsets for padding.
+        :type offset: Tuple[int, int]
+
+        :return: List of wall objects formatted for Foundry VTT scene JSON.
+        :rtype: List[dict]
+        """
         ox, oy = offset
         foundry_walls = [
             {
@@ -58,8 +107,30 @@ class DungeonExporter:
         return foundry_walls
 
     @staticmethod
-    def _doors_to_foundry_format(doors: List[Door], grid_size: int, offset: Tuple[int, int]) -> List[dict]:
-        return DungeonExporter._walls_to_foundry_format([ d.door_to_wall() for d in doors], grid_size, offset)
+    def _doors_to_foundry_format(
+        doors: List[Door],
+        grid_size: int,
+        offset: Tuple[int, int]
+        ) -> List[dict]:
+        """
+        Converts a list of Door objects into Foundry wall-format entries by turning
+        them into short wall segments.
+
+        :param doors: List of Door elements from the dungeon.
+        :type doors: List[Door]
+        :param grid_size: Pixel size of each tile.
+        :type grid_size: int
+        :param offset: Tuple of pixel offset (x, y).
+        :type offset: Tuple[int, int]
+
+        :return: List of Foundry-compatible wall entries representing doors.
+        :rtype: List[dict]
+        """
+        return DungeonExporter._walls_to_foundry_format(
+            [ d.door_to_wall() for d in doors],
+            grid_size, offset
+            )
+
 
     # @staticmethod
     # def _notes_to_foundry_format(notes: List[Note], grid_size: int) -> List[dict]:
@@ -126,26 +197,27 @@ class DungeonExporter:
     #         for s in sounds
     #     ]
 
-    def export_to_foundry_scene(
-        self,
-        folder: str,
-        grid_size: int = TILE_SIZE,
-    ):
+    def export_to_foundry_scene(self, folder: str):
         """
-        Exports the dungeon to a FoundryVTT-compatible scene JSON file, along with a rendered background image.
+        Exports the dungeon to a Foundry VTT-compatible scene.
 
-        :param folder: Folder path to export JSON and image.
-        :param grid_size: Grid size in pixels.
+        The export includes:
+            - Rendered dungeon image (PNG)
+            - Scene JSON with metadata, wall/door geometry, and Foundry-specific flags
+
+        :param folder: Output directory for the exported scene files.
+        :type folder: str
         """
         os.makedirs(folder, exist_ok=True)
 
         image_path = os.path.join(folder, f"{self.dungeon.name}.png")
-        image = render_dungeon(self.dungeon)
+        renderer = DungeonRenderer(self.dungeon, self.exporter_settings.rendering_settings)
+        image = renderer.render_dungeon()
         image.save(image_path)
 
-        padding: float = 0.25
+        grid_size = self.exporter_settings.rendering_settings.TILE_SIZE
 
-        offset = self._calculate_offset(grid_size, padding)
+        offset = self._calculate_offset(grid_size, self.exporter_settings.foundry_padding)
         walls = self._walls_to_foundry_format(self.dungeon.walls, grid_size, offset)
         doors = self._doors_to_foundry_format(self.dungeon.doors, grid_size, offset)
         # notes = _notes_to_foundry_format(self.dungeon.notes, grid_size)
@@ -176,7 +248,7 @@ class DungeonExporter:
             "thumb": None,
             "width": self.dungeon.width * grid_size,
             "height": self.dungeon.height * grid_size,
-            "padding": padding,
+            "padding": self.exporter_settings.foundry_padding,
             "initial": {
                 "x": 3767,
                 "y": 3086,
@@ -256,7 +328,7 @@ class DungeonExporter:
         }
 
         json_path = os.path.join(folder, f"{self.dungeon.name}_scene.json")
-        with open(json_path, "w") as f:
+        with open(json_path, "w", encoding="utf-8") as f:
             json.dump(scene, f, indent=2)
 
-        print(f"[✓] Foundry scene exported to {json_path}")
+        log.info("Foundry scene exported to %s", json_path)

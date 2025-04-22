@@ -1,15 +1,6 @@
-"""
-This module defines various enums used in procedural dungeon generation.
-
-These enums represent visual styles (like aging effects), generation modifiers (tags
-that influence the layout and complexity of the dungeon), and interactive elements
-like door types. It also provides utilities to interpret the meaning and interaction
-of these tags.
-"""
-
 import random
 from enum import Enum, auto
-from typing import Set, List, Tuple
+from typing import Set, List
 
 class GenerationTag(Enum):
     """
@@ -145,55 +136,3 @@ class GenerationTag(Enum):
             random.choice(list(GenerationTag.mutually_exclusive_groups()[4])), # Select random theme
             GenerationTag.STRAIGHT # Default to straight hallways
         }
-
-
-class AgingLevel(Enum):
-    """
-    Enum representing the level of visual aging effects applied to a dungeon.
-    Used to influence crack density and other weathering effects.
-    """
-
-    FEW = 1
-    NORMAL = 2
-    MANY = 3
-
-class Direction(Enum):
-    UP = "up"
-    DOWN = "down"
-    LEFT = "left"
-    RIGHT = "right"
-
-    @staticmethod
-    def move_cell_in_direction(cell: Tuple[int, int], direction:'Direction', steps: int = 1) -> (int, int):
-        match direction:
-            case Direction.UP:
-                return cell[0], cell[1] - steps
-            case Direction.DOWN:
-                return cell[0], cell[1] + steps
-            case Direction.LEFT:
-                return cell[0] - steps, cell[1]
-            case Direction.RIGHT:
-                return cell[0] + steps, cell[1]
-
-    def get_opposite(self) -> 'Direction':
-        return {
-            Direction.UP: Direction.DOWN,
-            Direction.DOWN: Direction.UP,
-            Direction.LEFT: Direction.RIGHT,
-            Direction.RIGHT: Direction.LEFT,
-        }[self]
-
-class DoorType(Enum):
-    """
-    Enumeration of supported door types.
-    Used to determine door appearance and interaction behavior.
-    """
-
-    GLASS = auto()
-    METAL = auto()
-    STONE = auto()
-    WOOD = auto()
-
-class RoomType(Enum):
-
-    ENTRANCE = auto()

@@ -1,6 +1,18 @@
+"""
+Dungeon Style Module
+
+Defines the DungeonStyle class, which centralizes all visual styling information
+used during dungeon rendering. This includes colors for floors, walls, doors, and
+materials like wood, stone, metal, and glass. It also provides mappings from
+DoorType enums to their associated fill and frame colors.
+
+This style configuration ensures consistent rendering aesthetics across all visual
+components of the dungeon.
+"""
+
 from dataclasses import dataclass, field
 from colour import Color
-from dungeon_generator.elements import DoorType
+from rosecrypt.generation.enums.door_type import DoorType
 
 @dataclass
 class DungeonStyle:

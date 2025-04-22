@@ -1,23 +1,40 @@
+"""
+Unit tests for the dungeon generation process.
+
+This module tests that dungeons generated using the procedural generator
+have correct dimensions and conform to basic structural expectations.
+"""
+
 import unittest
-from dungeon_generator.generator import generate_dungeon, GenerationSettings
-from dungeon_generator.enums import GenerationTag
+import uuid
+from rosecrypt.generation.dungeon_generator import DungeonGenerator, GenerationSettings
+from rosecrypt.generation.enums.generation_tag import GenerationTag
 
 class TestDungeonGenerator(unittest.TestCase):
-    """Tests for validating the dungeon generation process."""
+    """
+    Test case for verifying procedural dungeon generation.
+
+    Ensures the generator produces a dungeon with correct grid dimensions
+    and basic integrity using default generation tags and a fixed seed.
+    """
 
     def test_dimensions(self):
-        """Ensure the generated dungeon grid has the correct width and height."""
+        """
+        Tests that the generated dungeon has a grid matching the specified dimensions.
 
-        width = 100
-        height = 100
+        Ensures the width and height of the dungeon match the provided input values.
+        """
+
+        width, height = 100, 100
+        seed = uuid.uuid4().hex[:8]
         settings = GenerationSettings.from_gui(
             width=width,
             height=height,
-            seed="testseed",
+            seed=seed,
             tags=GenerationTag.make_full_set()
         )
 
-        dungeon = generate_dungeon(width, height, settings)
+        dungeon = DungeonGenerator(settings).generate_dungeon(width, height)
 
         self.assertEqual(len(dungeon.grid), height)
         self.assertEqual(len(dungeon.grid[0]), width)

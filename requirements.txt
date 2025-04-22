@@ -8,3 +8,4 @@ setuptools
 colour
 noise
 pylint
+colorlog
