@@ -82,7 +82,6 @@ class DungeonGenerator:
             log.info("Not all rooms are connected to the entrance, trying to fix it.")
             self._place_missing_hallways(dungeon)
 
-        #pylint: disable=fixme
         # TODO: Step 3: Populate all Rooms with appropriate RoomTypes and DoorTypes
 
         # Step 4: Add doors
@@ -390,7 +389,6 @@ class DungeonGenerator:
                         return True
                     connected_ids.update(room.get_connected_room_ids_by_extension(self.rooms))
 
-        #pylint: disable=fixme
         # TODO: Implement additional fallback logic
 
         log.warning("Could not connect all sections/rooms to the entrance!")

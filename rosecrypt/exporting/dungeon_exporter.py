@@ -199,7 +199,7 @@ class DungeonExporter:
     #         for s in sounds
     #     ]
 
-    def export_to_foundry_scene(self, folder: str):
+    def export_to_foundry_scene(self, folder: str) -> List[str]:
         """
         Exports the dungeon to a Foundry VTT-compatible scene.
 
@@ -212,7 +212,7 @@ class DungeonExporter:
         """
         os.makedirs(folder, exist_ok=True)
 
-        image_path = os.path.join(folder, f"{self.dungeon.name}.png")
+        image_path = os.path.join(folder, f"{self.dungeon.name.lower()}.png")
         renderer = DungeonRenderer(self.dungeon, self.exporter_settings.rendering_settings)
         image = renderer.render_dungeon()
         image.save(image_path)
@@ -329,8 +329,11 @@ class DungeonExporter:
             "flags": {},
         }
 
-        json_path = os.path.join(folder, f"{self.dungeon.name}_scene.json")
+        json_path = os.path.join(folder, f"{self.dungeon.name.lower()}_scene.json")
         with open(json_path, "w", encoding="utf-8") as f:
             json.dump(scene, f, indent=2)
 
         log.info("Foundry scene exported to %s", json_path)
+        log.info("Foundry image exported to %s", image_path)
+
+        return [image_path, json_path]

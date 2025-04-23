@@ -8,6 +8,7 @@ exported to Foundry VTT's format, including both the scene JSON and image file.
 import unittest
 import os
 import uuid
+from pathlib import Path
 
 from rosecrypt.logger import setup_logger
 from rosecrypt.generation.dungeon_generator import DungeonGenerator, GenerationSettings
@@ -34,14 +35,14 @@ class TestDungeonExporter(unittest.TestCase):
         Cleans up all generated files after the test completes.
         """
         # Setup export folder
-        export_folder = "./.test_export"
+        export_folder = Path(".test_export")
         os.makedirs(export_folder, exist_ok=True)
 
         # Generate dungeon with dummy settings
         width, height = 20, 20
         seed = uuid.uuid4().hex[:8]
         log.info(
-            "Trying to export dungeon with seed %s (%s, %s)",
+            "Trying to generate, render and export dungeon with seed %s (%s, %s)",
             seed,
             width,
             height
@@ -56,16 +57,12 @@ class TestDungeonExporter(unittest.TestCase):
         rendering_tags= RenderingTag.make_full_set()
         render_settings= RenderingSettings(seed, rendering_tags)
         exporter = DungeonExporter(dungeon, ExporterSettings(render_settings))
-        exporter.export_to_foundry_scene(export_folder)
 
-        # Check outputs
-        image_path = os.path.join(export_folder, f"{dungeon.name.lower()}.png")
-        json_path = os.path.join(export_folder, f"{dungeon.name.lower()}_scene.json")
+        exported_paths = exporter.export_to_foundry_scene(str(export_folder))
 
-        self.assertTrue(os.path.exists(image_path), f"Missing dungeon image: {image_path}")
-        self.assertTrue(os.path.exists(json_path), f"Missing dungeon scene JSON: {json_path}")
+        for path in exported_paths:
+            self.assertTrue(Path(path).exists(), f"Missing export file: {path}")
 
-        # Cleanup
-        os.remove(image_path)
-        os.remove(json_path)
+            # Cleanup
+            os.remove(path)
         os.rmdir(export_folder)

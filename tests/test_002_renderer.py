@@ -35,7 +35,7 @@ class TestDungeonRenderer(unittest.TestCase):
         width, height = 40, 40
         seed = uuid.uuid4().hex[:8]
         log.info(
-            "Trying to render dungeon with seed %s (%s, %s)",
+            "Trying to generate and render dungeon with seed %s (%s, %s)",
             seed,
             width,
             height

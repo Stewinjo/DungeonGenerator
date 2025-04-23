@@ -31,3 +31,6 @@ dist/
 
 # Test folders
 .test_export
+
+# Logs
+*.log
