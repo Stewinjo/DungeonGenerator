@@ -55,13 +55,13 @@ class Path:
 
         if o1 != o2 and o3 != o4:
             return True
-        elif o1 == 0 and on_segment(p1, p2, q1):
+        if o1 == 0 and on_segment(p1, p2, q1):
             return True
-        elif o2 == 0 and on_segment(p1, q2, q1):
+        if o2 == 0 and on_segment(p1, q2, q1):
             return True
-        elif o3 == 0 and on_segment(p2, p1, q2):
+        if o3 == 0 and on_segment(p2, p1, q2):
             return True
-        elif o4 == 0 and on_segment(p2, q1, q2):
+        if o4 == 0 and on_segment(p2, q1, q2):
             return True
 
         return False
@@ -88,13 +88,10 @@ class Path:
         if self.x1 == self.x2:
             if self.y1 > self.y2:
                 return Direction.UP
-            else:
-                return Direction.DOWN
-        else:
-            if self.x1 > self.x2:
-                return Direction.LEFT
-            else:
-                return Direction.RIGHT
+            return Direction.DOWN
+        if self.x1 > self.x2:
+            return Direction.LEFT
+        return Direction.RIGHT
 
     def get_line_points(self) -> List[Tuple[int, int]]:
         """
@@ -106,14 +103,13 @@ class Path:
         """
         if self.is_one_cell_path():
             return [[self.x1, self.y1]]
-        elif self.x1 == self.x2:
+        if self.x1 == self.x2:
             # Vertical path
             return [(self.x1, y) for y in range(min(self.y1, self.y2), max(self.y1, self.y2) + 1)]
-        elif self.y1 == self.y2:
+        if self.y1 == self.y2:
             # Horizontal path
             return [(x, self.y1) for x in range(min(self.x1, self.x2), max(self.x1, self.x2) + 1)]
-        else:
-            raise ValueError(f"Path is not axis-aligned: {self}")
+        raise ValueError(f"Path is not axis-aligned: {self}")
 
     def path_intersects_room(self, room: Room, buffer: int = 0) -> bool:
         """

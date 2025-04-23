@@ -1,0 +1,36 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
+  - repo: local
+    hooks:
+      - id: pylint
+        name: Run Pylint
+        entry: pylint
+        language: python
+        types: [python]
+        args: [--rcfile=.pylintrc]
+        additional_dependencies:
+          - pylint
+          - colorlog
+          - pillow
+          - noise
+          - colour
+
+      - id: pytest
+        name: Run Pytest
+        entry: pytest
+        language: python
+        types: [python]
+        pass_filenames: false
+        additional_dependencies:
+          - pytest
+          - colorlog
+          - pillow
+          - noise
+          - colour

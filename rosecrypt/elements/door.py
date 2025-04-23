@@ -11,8 +11,7 @@ This module is part of the dungeon element system used by Rosecrypt.
 from dataclasses import dataclass
 from rosecrypt.enums import Direction
 from rosecrypt.elements.wall_segment import WallSegment
-from rosecrypt.generation.enums.door_type import DoorType
-
+from rosecrypt.generation.enums import DoorType
 
 @dataclass
 class Door:

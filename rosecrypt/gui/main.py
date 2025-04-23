@@ -26,6 +26,8 @@ from rosecrypt.generation.enums.generation_tag import GenerationTag
 from rosecrypt.exporting.dungeon_exporter import DungeonExporter
 from rosecrypt.exporting.exporter_settings import ExporterSettings
 
+# pylint: disable=too-many-instance-attributes
+# pylint: disable=too-few-public-methods
 class DungeonApp:
     """
     Main application window for the Rosecrypt Dungeon Generator GUI.
@@ -409,30 +411,23 @@ class DungeonApp:
             return
 
         # Skip if canvas is empty
-        bbox = self.canvas.bbox("all")
-        if not bbox:
+        if not self.canvas.bbox("all"):
             return
+
+        x0, y0, x1, y1 = self.canvas.bbox("all")
 
         # Convert mouse position to canvas coords (adjusted for zoom and scroll)
         start_x, start_y = self._pan_start
         current_x = self.canvas.canvasx(event.x)
         current_y = self.canvas.canvasy(event.y)
 
-        # Delta movement in pixels
-        dx = start_x - current_x
-        dy = start_y - current_y
-
-        x0, y0, x1, y1 = bbox
-        canvas_width = x1 - x0
-        canvas_height = y1 - y0
-
         # Get current scroll fractions
         x_scroll = self.canvas.xview()
         y_scroll = self.canvas.yview()
 
         # Adjust scroll position based on pixel delta
-        new_x = x_scroll[0] + dx / canvas_width
-        new_y = y_scroll[0] + dy / canvas_height
+        new_x = x_scroll[0] + (start_x - current_x) / (x1 - x0)
+        new_y = y_scroll[0] + (start_y - current_y) / (y1 - y0)
 
         self.canvas.xview_moveto(new_x)
         self.canvas.yview_moveto(new_y)

@@ -1,11 +1,22 @@
+"""
+Tags used to control and influence procedural dungeon generation.
+
+GenerationTags are modular switches applied to customize the behavior,
+layout, style, and content of generated dungeons. These include room
+sizes, density, themes, entry point behavior, and corridor style.
+"""
+
 import random
 from enum import Enum, auto
 from typing import Set, List
 
 class GenerationTag(Enum):
     """
-    Enum representing tags that can be used to influence the dungeon generation process.
-    These tags affect aspects such as room size, layout density, and corridor behavior.
+    Enum representing tags that modify dungeon generation behavior.
+
+    Attributes:
+        category (str): Descriptive category of the tag (e.g., Room Size, Themes).
+        data (Any): Optional data associated with the tag (e.g., size tuple or numeric value).
     """
 
     def __new__(cls, category: str, data):
@@ -20,6 +31,22 @@ class GenerationTag(Enum):
 
     @staticmethod
     def _generate_next_value_(name, start, count, last_values):
+        """
+        Overrides the default behavior for auto-assigned enum values.
+
+        This method ensures each enum value receives a unique, sequential integer
+        regardless of category or data structure. The value is simply set to the
+        number of already defined members (i.e., `count`), ensuring predictable ordering.
+
+        Args:
+            name (str): The name of the enum member.
+            start (Any): The initial value (unused here).
+            count (int): The number of previously defined members.
+            last_values (List[Any]): A list of previous values.
+
+        Returns:
+            int: A unique integer value for the enum member.
+        """
         return count  # Ensure safe int values for all auto() fields
 
     # Room sizes
@@ -64,6 +91,15 @@ class GenerationTag(Enum):
 
     @staticmethod
     def resolve_room_size(tags: Set['GenerationTag']) -> tuple[int, int]:
+        """
+        Determines the room size range based on active tags.
+
+        Args:
+            tags (Set[GenerationTag]): Active generation tags.
+
+        Returns:
+            tuple[int, int]: A (min, max) tuple defining room dimensions.
+        """
         if GenerationTag.SMALL_ROOMS in tags:
             return GenerationTag.SMALL_ROOMS.data
         if GenerationTag.LARGE_ROOMS in tags:
@@ -72,6 +108,15 @@ class GenerationTag(Enum):
 
     @staticmethod
     def resolve_max_depth(tags: Set['GenerationTag']) -> int:
+        """
+        Resolves how many room placement passes (depth) to attempt based on density tags.
+
+        Args:
+            tags (Set[GenerationTag]): Active generation tags.
+
+        Returns:
+            int: Number of attempts or depth used during room placement.
+        """
         if GenerationTag.SPARSE in tags:
             return GenerationTag.SPARSE.data
         if GenerationTag.DENSE in tags:
@@ -81,22 +126,27 @@ class GenerationTag(Enum):
     @staticmethod
     def mutually_exclusive_groups() -> List[Set['GenerationTag']]:
         """
-        Returns a list of sets, each containing tags that are mutually exclusive.
+        Defines sets of tags that cannot be combined. Used for validation and UI toggles.
+
+        Returns:
+            List[Set[GenerationTag]]: List of sets, each set containing mutually exclusive tags.
         """
 
         return [
             {GenerationTag.SMALL_ROOMS, GenerationTag.MEDIUM_ROOMS, GenerationTag.LARGE_ROOMS},
             {GenerationTag.DENSE, GenerationTag.SPARSE, GenerationTag.MEDIUM},
             {
-                GenerationTag.ENTRANCE_EAST, GenerationTag.ENTRANCE_NORTH, GenerationTag.ENTRANCE_SOUTH,
-                GenerationTag.ENTRANCE_WEST, GenerationTag.STAIRS
+                GenerationTag.ENTRANCE_EAST, GenerationTag.ENTRANCE_NORTH,
+                GenerationTag.ENTRANCE_SOUTH, GenerationTag.ENTRANCE_WEST,
+                GenerationTag.STAIRS
             },
             {
-                GenerationTag.ANY, GenerationTag.ARCTIC, GenerationTag.COASTAL, GenerationTag.DESERT,
-                GenerationTag.FOREST, GenerationTag.GRASSLAND, GenerationTag.HILL, GenerationTag.MOUNTAIN,
-                GenerationTag.SWAMP, GenerationTag.UNDERDARK, GenerationTag.UNDERWATER, GenerationTag.URBAN,
-                GenerationTag.BANDIT, GenerationTag.NECROMANCER, GenerationTag.KOBOLD, GenerationTag.GOBLIN,
-                GenerationTag.GNOLL
+                GenerationTag.ANY, GenerationTag.ARCTIC, GenerationTag.COASTAL,
+                GenerationTag.DESERT, GenerationTag.FOREST, GenerationTag.GRASSLAND,
+                GenerationTag.HILL, GenerationTag.MOUNTAIN, GenerationTag.SWAMP,
+                GenerationTag.UNDERDARK, GenerationTag.UNDERWATER, GenerationTag.URBAN,
+                GenerationTag.BANDIT, GenerationTag.NECROMANCER, GenerationTag.KOBOLD,
+                GenerationTag.GOBLIN, GenerationTag.GNOLL
             },
             {
                 GenerationTag.STRAIGHT, GenerationTag.MAZE
@@ -104,17 +154,20 @@ class GenerationTag(Enum):
         ]
 
     @classmethod
-    def toggle_tag(cls, active_tags: Set['GenerationTag'], new_tag: 'GenerationTag') -> Set['GenerationTag']:
+    def toggle_tag(
+        cls,
+        active_tags: Set['GenerationTag'],
+        new_tag: 'GenerationTag'
+        ) -> Set['GenerationTag']:
         """
-        Toggles a tag in the active set. If the tag is being added, any mutually exclusive
-        tags are removed first. If it's already active, it is removed.
+        Adds or removes a tag, ensuring mutual exclusivity is respected.
 
         Args:
-            active_tags: Current set of selected tags.
-            new_tag: The tag being toggled.
+            active_tags (Set[GenerationTag]): Currently active tags.
+            new_tag (GenerationTag): The tag being toggled.
 
         Returns:
-            Updated set of active tags.
+            Set[GenerationTag]: Updated set of tags with toggled state.
         """
 
         updated = set(active_tags)
@@ -129,10 +182,20 @@ class GenerationTag(Enum):
 
     @staticmethod
     def make_full_set() -> Set['GenerationTag']:
+        """
+        Returns a default set of generation tags, including one tag from each exclusive group.
+
+        Returns:
+            Set[GenerationTag]: Default tag set for medium-sized, medium-density dungeons.
+        """
         return {
             GenerationTag.MEDIUM_ROOMS, # Default to medium rooms
             GenerationTag.MEDIUM, # Default to normal room density
-            random.choice(list(GenerationTag.mutually_exclusive_groups()[3])), # Select random entrance option
-            random.choice(list(GenerationTag.mutually_exclusive_groups()[4])), # Select random theme
+            random.choice(
+                list(GenerationTag.mutually_exclusive_groups()[3])
+                ), # Select random entrance option
+            random.choice(
+                list(GenerationTag.mutually_exclusive_groups()[4])
+                ), # Select random theme
             GenerationTag.STRAIGHT # Default to straight hallways
         }

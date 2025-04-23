@@ -14,6 +14,7 @@ from dataclasses import dataclass, field
 from colour import Color
 from rosecrypt.generation.enums.door_type import DoorType
 
+#pylint: disable=too-many-instance-attributes
 @dataclass
 class DungeonStyle:
     """
@@ -38,13 +39,27 @@ class DungeonStyle:
     """
 
     # Materials
-    paper_color: Color = field(default_factory=lambda: Color("#E5E2CF"))   # Background (non-tile area)
-    ink_color: Color = field(default_factory=lambda: Color("#2C241D"))     # Reserved for text/labels
-    water_color: Color = field(default_factory=lambda: Color("#5B9698"))   # Reserved for water tiles
-    wood_color: Color = field(default_factory=lambda: Color("#A37143"))    # Medium warm wood tone
-    stone_color: Color = field(default_factory=lambda: Color("#BFBEB6"))   # Wall segments
-    glass_color: Color = field(default_factory=lambda: Color("#A87C5F"))   # Warm brown (glass door)
-    metal_color: Color = field(default_factory=lambda: Color("#888A8C"))   # Cold steel gray
+    paper_color: Color = field(
+        default_factory=lambda: Color("#E5E2CF")
+        )   # Background (non-tile area)
+    ink_color: Color = field(
+        default_factory=lambda: Color("#2C241D")
+        )     # Reserved for text/labels
+    water_color: Color = field(
+        default_factory=lambda: Color("#5B9698")
+        )   # Reserved for water tiles
+    wood_color: Color = field(
+        default_factory=lambda: Color("#A37143")
+        )    # Medium warm wood tone
+    stone_color: Color = field(
+        default_factory=lambda: Color("#BFBEB6")
+        )   # Wall segments
+    glass_color: Color = field(
+        default_factory=lambda: Color("#A87C5F")
+        )   # Warm brown (glass door)
+    metal_color: Color = field(
+        default_factory=lambda: Color("#888A8C")
+        )   # Cold steel gray
 
     # General theme
     floor_color: Color = field(default_factory=lambda: Color("#D9D5C3"))

@@ -7,7 +7,6 @@ Lights include position, brightness levels, and optional color tint for VTT expo
 from typing import Optional
 from dataclasses import dataclass
 
-
 @dataclass
 class Light:
     """

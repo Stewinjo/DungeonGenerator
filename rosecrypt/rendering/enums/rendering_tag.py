@@ -49,10 +49,20 @@ class RenderingTag(Enum):
     @staticmethod
     def _generate_next_value_(name, start, count, last_values):
         """
-        Ensures automatically generated enum values are unique integers.
+        Overrides the default behavior for auto-assigned enum values.
 
-        :return: Integer value for the enum entry.
-        :rtype: int
+        This method ensures each enum value receives a unique, sequential integer
+        regardless of category or data structure. The value is simply set to the
+        number of already defined members (i.e., `count`), ensuring predictable ordering.
+
+        Args:
+            name (str): The name of the enum member.
+            start (Any): The initial value (unused here).
+            count (int): The number of previously defined members.
+            last_values (List[Any]): A list of previous values.
+
+        Returns:
+            int: A unique integer value for the enum member.
         """
         return count  # Ensure safe int values for all auto() fields
 
@@ -92,7 +102,11 @@ class RenderingTag(Enum):
         return None
 
     @classmethod
-    def toggle_tag(cls, active_tags: Set['RenderingTag'], new_tag: 'RenderingTag') -> Set['RenderingTag']:
+    def toggle_tag(
+        cls,
+        active_tags: Set['RenderingTag'],
+        new_tag: 'RenderingTag'
+        ) -> Set['RenderingTag']:
         """
         Toggles the presence of a tag in the active set, enforcing mutual exclusivity.
 

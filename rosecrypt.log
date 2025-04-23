@@ -4633,3 +4633,1068 @@
 [2025-04-22 09:27:42] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (26, 23)
 [2025-04-22 09:27:42] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (14, 26)
 [2025-04-22 09:27:42] [INFO] [Rendering] Finished drawing 3 doors.
+[2025-04-23 11:29:02] [INFO] [Generation] Starting to place rooms...
+[2025-04-23 11:29:02] [INFO] [Generation] Finished placing 8 rooms.
+[2025-04-23 11:29:02] [INFO] [Generation] Starting to connect rooms...
+[2025-04-23 11:29:02] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=0, x1=12, y1=34, x2=21, y2=39, room_type=None, connections={0, 4}) to Room(id=4, x1=15, y1=24, x2=20, y2=33, room_type=None, connections={0, 4}).
+[2025-04-23 11:29:02] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=4, x1=15, y1=24, x2=20, y2=33, room_type=None, connections={0, 19, 4}) to Room(id=19, x1=2, y1=23, x2=13, y2=31, room_type=None, connections={19, 4}).
+[2025-04-23 11:29:02] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=7, y1=22, x2=7, y2=22), Path(x1=6, y1=13, x2=6, y2=13), Path(x1=7, y1=21, x2=7, y2=14), Path(x1=6, y1=14, x2=6, y2=14)]
+[2025-04-23 11:29:02] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=19, x1=2, y1=23, x2=13, y2=31, room_type=None, connections={1, 19, 4}) to Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 19}).
+[2025-04-23 11:29:02] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 19, 15}) to Room(id=15, x1=9, y1=6, x2=18, y2=16, room_type=None, connections={1, 15}).
+[2025-04-23 11:29:02] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=15, x1=9, y1=6, x2=18, y2=16, room_type=None, connections={1, 6, 15}) to Room(id=6, x1=19, y1=2, x2=28, y2=11, room_type=None, connections={6, 15}).
+[2025-04-23 11:29:02] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=22, y1=11, x2=22, y2=11), Path(x1=24, y1=22, x2=24, y2=22), Path(x1=22, y1=12, x2=22, y2=22), Path(x1=23, y1=22, x2=23, y2=22)]
+[2025-04-23 11:29:02] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=6, x1=19, y1=2, x2=28, y2=11, room_type=None, connections={3, 6, 15}) to Room(id=3, x1=25, y1=16, x2=33, y2=25, room_type=None, connections={3, 6}).
+[2025-04-23 11:29:02] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=32, y1=25, x2=32, y2=25), Path(x1=34, y1=30, x2=34, y2=30), Path(x1=32, y1=26, x2=34, y2=26), Path(x1=34, y1=29, x2=34, y2=27)]
+[2025-04-23 11:29:02] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=3, x1=25, y1=16, x2=33, y2=25, room_type=None, connections={26, 3, 6}) to Room(id=26, x1=26, y1=31, x2=36, y2=39, room_type=None, connections={26, 3}).
+[2025-04-23 11:29:02] [INFO] [Generation] Finished connecting rooms.
+[2025-04-23 11:29:02] [INFO] [Generation] Starting to place doors...
+[2025-04-23 11:29:02] [INFO] [Generation] Finished placing 11 doors.
+[2025-04-23 11:29:02] [INFO] [Generation] Starting to place walls...
+[2025-04-23 11:29:02] [INFO] [Generation] Finished placing walls.
+[2025-04-23 11:29:02] [INFO] [Rendering] Drawing pretty walls...
+[2025-04-23 11:29:02] [INFO] [Rendering] Finshed drawing 338 pretty walls.
+[2025-04-23 11:29:02] [INFO] [Rendering] Drawing simple walls...
+[2025-04-23 11:29:02] [INFO] [Rendering] Finshed drawing 338 simple walls.
+[2025-04-23 11:29:02] [INFO] [Rendering] Drawing floor...
+[2025-04-23 11:29:02] [INFO] [Rendering] Finished drawing floor.
+[2025-04-23 11:29:02] [INFO] [Rendering] Drawing pebbles...
+[2025-04-23 11:29:02] [INFO] [Rendering] Finished pebbles floor.
+[2025-04-23 11:29:02] [INFO] [Rendering] Drawing cracks...
+[2025-04-23 11:29:02] [INFO] [Rendering] Finished cracks floor.
+[2025-04-23 11:29:02] [INFO] [Rendering] Drawing doors...
+[2025-04-23 11:29:02] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (15, 33)
+[2025-04-23 11:29:02] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (13, 24)
+[2025-04-23 11:29:02] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (7, 22)
+[2025-04-23 11:29:02] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (6, 13)
+[2025-04-23 11:29:02] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (8, 12)
+[2025-04-23 11:29:02] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (18, 8)
+[2025-04-23 11:29:02] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (22, 11)
+[2025-04-23 11:29:02] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (24, 22)
+[2025-04-23 11:29:02] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (32, 25)
+[2025-04-23 11:29:02] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (34, 30)
+[2025-04-23 11:29:02] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (6, 2)
+[2025-04-23 11:29:02] [INFO] [Rendering] Finished drawing 11 doors.
+[2025-04-23 11:29:04] [INFO] [Generation] Starting to place rooms...
+[2025-04-23 11:29:04] [INFO] [Generation] Finished placing 8 rooms.
+[2025-04-23 11:29:04] [INFO] [Generation] Starting to connect rooms...
+[2025-04-23 11:29:04] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=0, x1=12, y1=34, x2=21, y2=39, room_type=None, connections={0, 4}) to Room(id=4, x1=15, y1=24, x2=20, y2=33, room_type=None, connections={0, 4}).
+[2025-04-23 11:29:04] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=4, x1=15, y1=24, x2=20, y2=33, room_type=None, connections={0, 19, 4}) to Room(id=19, x1=2, y1=23, x2=13, y2=31, room_type=None, connections={19, 4}).
+[2025-04-23 11:29:04] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=7, y1=22, x2=7, y2=22), Path(x1=6, y1=13, x2=6, y2=13), Path(x1=7, y1=21, x2=7, y2=14), Path(x1=6, y1=14, x2=6, y2=14)]
+[2025-04-23 11:29:04] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=19, x1=2, y1=23, x2=13, y2=31, room_type=None, connections={1, 19, 4}) to Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 19}).
+[2025-04-23 11:29:04] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 19, 15}) to Room(id=15, x1=9, y1=6, x2=18, y2=16, room_type=None, connections={1, 15}).
+[2025-04-23 11:29:04] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=15, x1=9, y1=6, x2=18, y2=16, room_type=None, connections={1, 6, 15}) to Room(id=6, x1=19, y1=2, x2=28, y2=11, room_type=None, connections={6, 15}).
+[2025-04-23 11:29:04] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=22, y1=11, x2=22, y2=11), Path(x1=24, y1=22, x2=24, y2=22), Path(x1=22, y1=12, x2=22, y2=22), Path(x1=23, y1=22, x2=23, y2=22)]
+[2025-04-23 11:29:04] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=6, x1=19, y1=2, x2=28, y2=11, room_type=None, connections={3, 6, 15}) to Room(id=3, x1=25, y1=16, x2=33, y2=25, room_type=None, connections={3, 6}).
+[2025-04-23 11:29:04] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=32, y1=25, x2=32, y2=25), Path(x1=34, y1=30, x2=34, y2=30), Path(x1=32, y1=26, x2=34, y2=26), Path(x1=34, y1=29, x2=34, y2=27)]
+[2025-04-23 11:29:04] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=3, x1=25, y1=16, x2=33, y2=25, room_type=None, connections={26, 3, 6}) to Room(id=26, x1=26, y1=31, x2=36, y2=39, room_type=None, connections={26, 3}).
+[2025-04-23 11:29:04] [INFO] [Generation] Finished connecting rooms.
+[2025-04-23 11:29:04] [INFO] [Generation] Starting to place doors...
+[2025-04-23 11:29:04] [INFO] [Generation] Finished placing 11 doors.
+[2025-04-23 11:29:04] [INFO] [Generation] Starting to place walls...
+[2025-04-23 11:29:04] [INFO] [Generation] Finished placing walls.
+[2025-04-23 11:29:04] [INFO] [Rendering] Drawing pretty walls...
+[2025-04-23 11:29:04] [INFO] [Rendering] Finshed drawing 338 pretty walls.
+[2025-04-23 11:29:04] [INFO] [Rendering] Drawing simple walls...
+[2025-04-23 11:29:04] [INFO] [Rendering] Finshed drawing 338 simple walls.
+[2025-04-23 11:29:04] [INFO] [Rendering] Drawing floor...
+[2025-04-23 11:29:04] [INFO] [Rendering] Finished drawing floor.
+[2025-04-23 11:29:04] [INFO] [Rendering] Drawing pebbles...
+[2025-04-23 11:29:04] [INFO] [Rendering] Finished pebbles floor.
+[2025-04-23 11:29:04] [INFO] [Rendering] Drawing cracks...
+[2025-04-23 11:29:04] [INFO] [Rendering] Finished cracks floor.
+[2025-04-23 11:29:04] [INFO] [Rendering] Drawing doors...
+[2025-04-23 11:29:04] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (15, 33)
+[2025-04-23 11:29:04] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (13, 24)
+[2025-04-23 11:29:04] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (7, 22)
+[2025-04-23 11:29:04] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (6, 13)
+[2025-04-23 11:29:04] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (8, 12)
+[2025-04-23 11:29:04] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (18, 8)
+[2025-04-23 11:29:04] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (22, 11)
+[2025-04-23 11:29:04] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (24, 22)
+[2025-04-23 11:29:04] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (32, 25)
+[2025-04-23 11:29:04] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (34, 30)
+[2025-04-23 11:29:04] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (6, 2)
+[2025-04-23 11:29:04] [INFO] [Rendering] Finished drawing 11 doors.
+[2025-04-23 11:29:05] [INFO] [Generation] Starting to place rooms...
+[2025-04-23 11:29:05] [INFO] [Generation] Finished placing 8 rooms.
+[2025-04-23 11:29:05] [INFO] [Generation] Starting to connect rooms...
+[2025-04-23 11:29:05] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=0, x1=12, y1=34, x2=21, y2=39, room_type=None, connections={0, 4}) to Room(id=4, x1=15, y1=24, x2=20, y2=33, room_type=None, connections={0, 4}).
+[2025-04-23 11:29:05] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=4, x1=15, y1=24, x2=20, y2=33, room_type=None, connections={0, 19, 4}) to Room(id=19, x1=2, y1=23, x2=13, y2=31, room_type=None, connections={19, 4}).
+[2025-04-23 11:29:05] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=7, y1=22, x2=7, y2=22), Path(x1=6, y1=13, x2=6, y2=13), Path(x1=7, y1=21, x2=7, y2=14), Path(x1=6, y1=14, x2=6, y2=14)]
+[2025-04-23 11:29:05] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=19, x1=2, y1=23, x2=13, y2=31, room_type=None, connections={1, 19, 4}) to Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 19}).
+[2025-04-23 11:29:05] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 19, 15}) to Room(id=15, x1=9, y1=6, x2=18, y2=16, room_type=None, connections={1, 15}).
+[2025-04-23 11:29:05] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=15, x1=9, y1=6, x2=18, y2=16, room_type=None, connections={1, 6, 15}) to Room(id=6, x1=19, y1=2, x2=28, y2=11, room_type=None, connections={6, 15}).
+[2025-04-23 11:29:05] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=22, y1=11, x2=22, y2=11), Path(x1=24, y1=22, x2=24, y2=22), Path(x1=22, y1=12, x2=22, y2=22), Path(x1=23, y1=22, x2=23, y2=22)]
+[2025-04-23 11:29:05] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=6, x1=19, y1=2, x2=28, y2=11, room_type=None, connections={3, 6, 15}) to Room(id=3, x1=25, y1=16, x2=33, y2=25, room_type=None, connections={3, 6}).
+[2025-04-23 11:29:05] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=32, y1=25, x2=32, y2=25), Path(x1=34, y1=30, x2=34, y2=30), Path(x1=32, y1=26, x2=34, y2=26), Path(x1=34, y1=29, x2=34, y2=27)]
+[2025-04-23 11:29:05] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=3, x1=25, y1=16, x2=33, y2=25, room_type=None, connections={26, 3, 6}) to Room(id=26, x1=26, y1=31, x2=36, y2=39, room_type=None, connections={26, 3}).
+[2025-04-23 11:29:05] [INFO] [Generation] Finished connecting rooms.
+[2025-04-23 11:29:05] [INFO] [Generation] Starting to place doors...
+[2025-04-23 11:29:05] [INFO] [Generation] Finished placing 11 doors.
+[2025-04-23 11:29:05] [INFO] [Generation] Starting to place walls...
+[2025-04-23 11:29:05] [INFO] [Generation] Finished placing walls.
+[2025-04-23 11:29:05] [INFO] [Rendering] Drawing pretty walls...
+[2025-04-23 11:29:05] [INFO] [Rendering] Finshed drawing 338 pretty walls.
+[2025-04-23 11:29:05] [INFO] [Rendering] Drawing simple walls...
+[2025-04-23 11:29:05] [INFO] [Rendering] Finshed drawing 338 simple walls.
+[2025-04-23 11:29:05] [INFO] [Rendering] Drawing floor...
+[2025-04-23 11:29:05] [INFO] [Rendering] Finished drawing floor.
+[2025-04-23 11:29:05] [INFO] [Rendering] Drawing pebbles...
+[2025-04-23 11:29:05] [INFO] [Rendering] Finished pebbles floor.
+[2025-04-23 11:29:05] [INFO] [Rendering] Drawing cracks...
+[2025-04-23 11:29:05] [INFO] [Rendering] Finished cracks floor.
+[2025-04-23 11:29:05] [INFO] [Rendering] Drawing doors...
+[2025-04-23 11:29:05] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (15, 33)
+[2025-04-23 11:29:05] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (13, 24)
+[2025-04-23 11:29:05] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (7, 22)
+[2025-04-23 11:29:05] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (6, 13)
+[2025-04-23 11:29:05] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (8, 12)
+[2025-04-23 11:29:05] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (18, 8)
+[2025-04-23 11:29:05] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (22, 11)
+[2025-04-23 11:29:05] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (24, 22)
+[2025-04-23 11:29:05] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (32, 25)
+[2025-04-23 11:29:05] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (34, 30)
+[2025-04-23 11:29:05] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (6, 2)
+[2025-04-23 11:29:05] [INFO] [Rendering] Finished drawing 11 doors.
+[2025-04-23 11:29:09] [INFO] [Generation] Starting to place rooms...
+[2025-04-23 11:29:09] [INFO] [Generation] Finished placing 8 rooms.
+[2025-04-23 11:29:09] [INFO] [Generation] Starting to connect rooms...
+[2025-04-23 11:29:09] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=0, x1=24, y1=34, x2=33, y2=39, room_type=None, connections={0, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4}).
+[2025-04-23 11:29:09] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4, 13}) to Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13}).
+[2025-04-23 11:29:09] [DEBUG] [Generation] Connecing rooms, secondary straight line: [Path(x1=23, y1=10, x2=23, y2=10), Path(x1=17, y1=8, x2=17, y2=8), Path(x1=23, y1=9, x2=17, y2=9)]
+[2025-04-23 11:29:09] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13, 7}) to Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}).
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:09] [INFO] [Generation] Could not connect next room: Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}) to Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1}).
+[2025-04-23 11:29:09] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:09] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:09] [WARNING] [Generation] Could not connect room Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}) to any other.
+[2025-04-23 11:29:09] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=6, y1=2, x2=6, y2=2), Path(x1=9, y1=23, x2=9, y2=23), Path(x1=6, y1=1, x2=9, y2=1), Path(x1=9, y1=22, x2=9, y2=2)]
+[2025-04-23 11:29:09] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 2}) to Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}).
+[2025-04-23 11:29:09] [INFO] [Generation] Could not connect next room: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}) to Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10}).
+[2025-04-23 11:29:09] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=16, y1=36, x2=16, y2=36), Path(x1=23, y1=34, x2=23, y2=34), Path(x1=16, y1=37, x2=22, y2=37), Path(x1=22, y1=34, x2=22, y2=36)]
+[2025-04-23 11:29:09] [DEBUG] [Generation] Connecting rooms, alternative: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={0, 1, 2}) to Room(id=0, x1=24, y1=34, x2=33, y2=39, room_type=None, connections={0, 2, 4}).
+[2025-04-23 11:29:09] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=43, y1=23, x2=43, y2=23), Path(x1=32, y1=10, x2=32, y2=10), Path(x1=43, y1=22, x2=32, y2=22), Path(x1=32, y1=11, x2=32, y2=21)]
+[2025-04-23 11:29:09] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10, 3}) to Room(id=3, x1=32, y1=1, x2=40, y2=10, room_type=None, connections={10, 3}).
+[2025-04-23 11:29:09] [INFO] [Generation] Finished connecting rooms.
+[2025-04-23 11:29:09] [INFO] [Generation] Not all rooms are connected to the entrance, trying to fix it.
+[2025-04-23 11:29:09] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:09] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:09] [WARNING] [Generation] Could not connect all sections/rooms to the entrance!
+[2025-04-23 11:29:09] [INFO] [Generation] Starting to place doors...
+[2025-04-23 11:29:09] [INFO] [Generation] Finished placing 1 doors.
+[2025-04-23 11:29:09] [INFO] [Generation] Starting to place walls...
+[2025-04-23 11:29:09] [INFO] [Generation] Finished placing walls.
+[2025-04-23 11:29:09] [INFO] [Rendering] Drawing pretty walls...
+[2025-04-23 11:29:09] [INFO] [Rendering] Finshed drawing 450 pretty walls.
+[2025-04-23 11:29:09] [INFO] [Rendering] Drawing simple walls...
+[2025-04-23 11:29:09] [INFO] [Rendering] Finshed drawing 450 simple walls.
+[2025-04-23 11:29:09] [INFO] [Rendering] Drawing floor...
+[2025-04-23 11:29:09] [INFO] [Rendering] Finished drawing floor.
+[2025-04-23 11:29:09] [INFO] [Rendering] Drawing pebbles...
+[2025-04-23 11:29:09] [INFO] [Rendering] Finished pebbles floor.
+[2025-04-23 11:29:09] [INFO] [Rendering] Drawing cracks...
+[2025-04-23 11:29:09] [INFO] [Rendering] Finished cracks floor.
+[2025-04-23 11:29:09] [INFO] [Rendering] Drawing doors...
+[2025-04-23 11:29:09] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (23, 37)
+[2025-04-23 11:29:09] [INFO] [Rendering] Finished drawing 1 doors.
+[2025-04-23 11:29:13] [INFO] [Generation] Starting to place rooms...
+[2025-04-23 11:29:13] [INFO] [Generation] Finished placing 8 rooms.
+[2025-04-23 11:29:13] [INFO] [Generation] Starting to connect rooms...
+[2025-04-23 11:29:13] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=0, x1=24, y1=34, x2=33, y2=39, room_type=None, connections={0, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4}).
+[2025-04-23 11:29:13] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4, 13}) to Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13}).
+[2025-04-23 11:29:13] [DEBUG] [Generation] Connecing rooms, secondary straight line: [Path(x1=23, y1=10, x2=23, y2=10), Path(x1=17, y1=8, x2=17, y2=8), Path(x1=23, y1=9, x2=17, y2=9)]
+[2025-04-23 11:29:13] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13, 7}) to Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}).
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:13] [INFO] [Generation] Could not connect next room: Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}) to Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1}).
+[2025-04-23 11:29:13] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:13] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:13] [WARNING] [Generation] Could not connect room Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}) to any other.
+[2025-04-23 11:29:13] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=6, y1=2, x2=6, y2=2), Path(x1=9, y1=23, x2=9, y2=23), Path(x1=6, y1=1, x2=9, y2=1), Path(x1=9, y1=22, x2=9, y2=2)]
+[2025-04-23 11:29:13] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 2}) to Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}).
+[2025-04-23 11:29:13] [INFO] [Generation] Could not connect next room: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}) to Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10}).
+[2025-04-23 11:29:13] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=16, y1=36, x2=16, y2=36), Path(x1=23, y1=34, x2=23, y2=34), Path(x1=16, y1=37, x2=22, y2=37), Path(x1=22, y1=34, x2=22, y2=36)]
+[2025-04-23 11:29:13] [DEBUG] [Generation] Connecting rooms, alternative: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={0, 1, 2}) to Room(id=0, x1=24, y1=34, x2=33, y2=39, room_type=None, connections={0, 2, 4}).
+[2025-04-23 11:29:13] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=43, y1=23, x2=43, y2=23), Path(x1=32, y1=10, x2=32, y2=10), Path(x1=43, y1=22, x2=32, y2=22), Path(x1=32, y1=11, x2=32, y2=21)]
+[2025-04-23 11:29:13] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10, 3}) to Room(id=3, x1=32, y1=1, x2=40, y2=10, room_type=None, connections={10, 3}).
+[2025-04-23 11:29:13] [INFO] [Generation] Finished connecting rooms.
+[2025-04-23 11:29:13] [INFO] [Generation] Not all rooms are connected to the entrance, trying to fix it.
+[2025-04-23 11:29:13] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:13] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:13] [WARNING] [Generation] Could not connect all sections/rooms to the entrance!
+[2025-04-23 11:29:13] [INFO] [Generation] Starting to place doors...
+[2025-04-23 11:29:13] [INFO] [Generation] Finished placing 1 doors.
+[2025-04-23 11:29:13] [INFO] [Generation] Starting to place walls...
+[2025-04-23 11:29:13] [INFO] [Generation] Finished placing walls.
+[2025-04-23 11:29:13] [INFO] [Rendering] Drawing pretty walls...
+[2025-04-23 11:29:13] [INFO] [Rendering] Finshed drawing 450 pretty walls.
+[2025-04-23 11:29:13] [INFO] [Rendering] Drawing simple walls...
+[2025-04-23 11:29:13] [INFO] [Rendering] Finshed drawing 450 simple walls.
+[2025-04-23 11:29:13] [INFO] [Rendering] Drawing floor...
+[2025-04-23 11:29:13] [INFO] [Rendering] Finished drawing floor.
+[2025-04-23 11:29:13] [INFO] [Rendering] Drawing pebbles...
+[2025-04-23 11:29:13] [INFO] [Rendering] Finished pebbles floor.
+[2025-04-23 11:29:13] [INFO] [Rendering] Drawing cracks...
+[2025-04-23 11:29:13] [INFO] [Rendering] Finished cracks floor.
+[2025-04-23 11:29:13] [INFO] [Rendering] Drawing doors...
+[2025-04-23 11:29:13] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (23, 37)
+[2025-04-23 11:29:13] [INFO] [Rendering] Finished drawing 1 doors.
+[2025-04-23 11:29:14] [INFO] [Generation] Starting to place rooms...
+[2025-04-23 11:29:14] [INFO] [Generation] Finished placing 8 rooms.
+[2025-04-23 11:29:14] [INFO] [Generation] Starting to connect rooms...
+[2025-04-23 11:29:14] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=0, x1=24, y1=34, x2=33, y2=39, room_type=None, connections={0, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4}).
+[2025-04-23 11:29:14] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4, 13}) to Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13}).
+[2025-04-23 11:29:14] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=27, y1=18, x2=27, y2=18), Path(x1=18, y1=7, x2=18, y2=7), Path(x1=28, y1=18, x2=28, y2=7), Path(x1=19, y1=7, x2=27, y2=7)]
+[2025-04-23 11:29:14] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13, 7}) to Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}).
+[2025-04-23 11:29:14] [DEBUG] [Generation] Connecing rooms, secondary straight line: [Path(x1=12, y1=1, x2=12, y2=1), Path(x1=5, y1=2, x2=5, y2=2), Path(x1=11, y1=1, x2=5, y2=1)]
+[2025-04-23 11:29:14] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={1, 13, 7}) to Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 7}).
+[2025-04-23 11:29:14] [DEBUG] [Generation] Path "Path(x1=0, y1=5, x2=0, y2=32)" is out of map bounds.
+[2025-04-23 11:29:14] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=5, y1=13, x2=5, y2=13), Path(x1=15, y1=23, x2=15, y2=23), Path(x1=5, y1=14, x2=15, y2=14), Path(x1=15, y1=22, x2=15, y2=15)]
+[2025-04-23 11:29:14] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 2, 7}) to Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}).
+[2025-04-23 11:29:14] [INFO] [Generation] Could not connect next room: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}) to Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10}).
+[2025-04-23 11:29:14] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=17, y1=35, x2=17, y2=35), Path(x1=19, y1=32, x2=19, y2=32), Path(x1=18, y1=35, x2=18, y2=33), Path(x1=19, y1=33, x2=19, y2=33)]
+[2025-04-23 11:29:14] [DEBUG] [Generation] Connecting rooms, alternative: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 2, 4, 13}).
+[2025-04-23 11:29:14] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=45, y1=28, x2=45, y2=28), Path(x1=40, y1=2, x2=40, y2=2), Path(x1=46, y1=28, x2=46, y2=2), Path(x1=41, y1=2, x2=45, y2=2)]
+[2025-04-23 11:29:14] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10, 3}) to Room(id=3, x1=32, y1=1, x2=40, y2=10, room_type=None, connections={10, 3}).
+[2025-04-23 11:29:14] [INFO] [Generation] Finished connecting rooms.
+[2025-04-23 11:29:14] [INFO] [Generation] Not all rooms are connected to the entrance, trying to fix it.
+[2025-04-23 11:29:14] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=33, y1=38, x2=33, y2=38), Path(x1=43, y1=33, x2=43, y2=33), Path(x1=34, y1=38, x2=34, y2=34), Path(x1=43, y1=34, x2=35, y2=34)]
+[2025-04-23 11:29:14] [INFO] [Generation] Connected all missing sections to the entrance.
+[2025-04-23 11:29:14] [INFO] [Generation] Starting to place doors...
+[2025-04-23 11:29:14] [INFO] [Generation] Finished placing 15 doors.
+[2025-04-23 11:29:14] [INFO] [Generation] Starting to place walls...
+[2025-04-23 11:29:14] [INFO] [Generation] Finished placing walls.
+[2025-04-23 11:29:14] [INFO] [Rendering] Drawing pretty walls...
+[2025-04-23 11:29:14] [INFO] [Rendering] Finshed drawing 488 pretty walls.
+[2025-04-23 11:29:14] [INFO] [Rendering] Drawing simple walls...
+[2025-04-23 11:29:14] [INFO] [Rendering] Finshed drawing 488 simple walls.
+[2025-04-23 11:29:14] [INFO] [Rendering] Drawing floor...
+[2025-04-23 11:29:14] [INFO] [Rendering] Finished drawing floor.
+[2025-04-23 11:29:14] [INFO] [Rendering] Drawing pebbles...
+[2025-04-23 11:29:14] [INFO] [Rendering] Finished pebbles floor.
+[2025-04-23 11:29:14] [INFO] [Rendering] Drawing cracks...
+[2025-04-23 11:29:14] [INFO] [Rendering] Finished cracks floor.
+[2025-04-23 11:29:14] [INFO] [Rendering] Drawing doors...
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (27, 32)
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (20, 23)
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (27, 18)
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (18, 7)
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (12, 1)
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (5, 2)
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (5, 13)
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (15, 23)
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (17, 35)
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (19, 32)
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (45, 28)
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (40, 2)
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (32, 0)
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (33, 38)
+[2025-04-23 11:29:14] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (43, 33)
+[2025-04-23 11:29:14] [INFO] [Rendering] Finished drawing 15 doors.
+[2025-04-23 11:29:15] [INFO] [Generation] Starting to place rooms...
+[2025-04-23 11:29:15] [INFO] [Generation] Finished placing 8 rooms.
+[2025-04-23 11:29:15] [INFO] [Generation] Starting to connect rooms...
+[2025-04-23 11:29:15] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=0, x1=24, y1=34, x2=33, y2=39, room_type=None, connections={0, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4}).
+[2025-04-23 11:29:15] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4, 13}) to Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13}).
+[2025-04-23 11:29:15] [DEBUG] [Generation] Connecing rooms, secondary straight line: [Path(x1=23, y1=10, x2=23, y2=10), Path(x1=17, y1=8, x2=17, y2=8), Path(x1=23, y1=9, x2=17, y2=9)]
+[2025-04-23 11:29:15] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13, 7}) to Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}).
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=7, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=5, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=2, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=4, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=3, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=6, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:15] [INFO] [Generation] Could not connect next room: Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}) to Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1}).
+[2025-04-23 11:29:15] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=18, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=21, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=22, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=23, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=20, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=13, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=26, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=17, y1=-1, x2=25, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=28, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=27, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=14, y1=-1, x2=32, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=15, y1=-1, x2=29, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=31, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Path "Path(x1=16, y1=-1, x2=24, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:15] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:15] [WARNING] [Generation] Could not connect room Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}) to any other.
+[2025-04-23 11:29:15] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=6, y1=2, x2=6, y2=2), Path(x1=9, y1=23, x2=9, y2=23), Path(x1=6, y1=1, x2=9, y2=1), Path(x1=9, y1=22, x2=9, y2=2)]
+[2025-04-23 11:29:15] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 2}) to Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}).
+[2025-04-23 11:29:15] [INFO] [Generation] Could not connect next room: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}) to Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10}).
+[2025-04-23 11:29:15] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=16, y1=36, x2=16, y2=36), Path(x1=23, y1=34, x2=23, y2=34), Path(x1=16, y1=37, x2=22, y2=37), Path(x1=22, y1=34, x2=22, y2=36)]
+[2025-04-23 11:29:15] [DEBUG] [Generation] Connecting rooms, alternative: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={0, 1, 2}) to Room(id=0, x1=24, y1=34, x2=33, y2=39, room_type=None, connections={0, 2, 4}).
+[2025-04-23 11:29:15] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=43, y1=23, x2=43, y2=23), Path(x1=32, y1=10, x2=32, y2=10), Path(x1=43, y1=22, x2=32, y2=22), Path(x1=32, y1=11, x2=32, y2=21)]
+[2025-04-23 11:29:15] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10, 3}) to Room(id=3, x1=32, y1=1, x2=40, y2=10, room_type=None, connections={10, 3}).
+[2025-04-23 11:29:15] [INFO] [Generation] Finished connecting rooms.
+[2025-04-23 11:29:15] [INFO] [Generation] Not all rooms are connected to the entrance, trying to fix it.
+[2025-04-23 11:29:15] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:15] [WARNING] [Generation] Ran out of Edges to try.
+[2025-04-23 11:29:15] [WARNING] [Generation] Could not connect all sections/rooms to the entrance!
+[2025-04-23 11:29:15] [INFO] [Generation] Starting to place doors...
+[2025-04-23 11:29:15] [INFO] [Generation] Finished placing 1 doors.
+[2025-04-23 11:29:15] [INFO] [Generation] Starting to place walls...
+[2025-04-23 11:29:15] [INFO] [Generation] Finished placing walls.
+[2025-04-23 11:29:15] [INFO] [Rendering] Drawing pretty walls...
+[2025-04-23 11:29:15] [INFO] [Rendering] Finshed drawing 450 pretty walls.
+[2025-04-23 11:29:15] [INFO] [Rendering] Drawing simple walls...
+[2025-04-23 11:29:15] [INFO] [Rendering] Finshed drawing 450 simple walls.
+[2025-04-23 11:29:15] [INFO] [Rendering] Drawing floor...
+[2025-04-23 11:29:15] [INFO] [Rendering] Finished drawing floor.
+[2025-04-23 11:29:15] [INFO] [Rendering] Drawing pebbles...
+[2025-04-23 11:29:15] [INFO] [Rendering] Finished pebbles floor.
+[2025-04-23 11:29:15] [INFO] [Rendering] Drawing cracks...
+[2025-04-23 11:29:15] [INFO] [Rendering] Finished cracks floor.
+[2025-04-23 11:29:15] [INFO] [Rendering] Drawing doors...
+[2025-04-23 11:29:15] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (23, 37)
+[2025-04-23 11:29:15] [INFO] [Rendering] Finished drawing 1 doors.
+[2025-04-23 11:29:19] [INFO] [Generation] Starting to place rooms...
+[2025-04-23 11:29:19] [INFO] [Generation] Finished placing 8 rooms.
+[2025-04-23 11:29:19] [INFO] [Generation] Starting to connect rooms...
+[2025-04-23 11:29:19] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=0, x1=24, y1=34, x2=33, y2=39, room_type=None, connections={0, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4}).
+[2025-04-23 11:29:19] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4, 13}) to Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13}).
+[2025-04-23 11:29:19] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=27, y1=18, x2=27, y2=18), Path(x1=18, y1=7, x2=18, y2=7), Path(x1=28, y1=18, x2=28, y2=7), Path(x1=19, y1=7, x2=27, y2=7)]
+[2025-04-23 11:29:19] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13, 7}) to Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}).
+[2025-04-23 11:29:19] [DEBUG] [Generation] Connecing rooms, secondary straight line: [Path(x1=12, y1=1, x2=12, y2=1), Path(x1=5, y1=2, x2=5, y2=2), Path(x1=11, y1=1, x2=5, y2=1)]
+[2025-04-23 11:29:19] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={1, 13, 7}) to Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 7}).
+[2025-04-23 11:29:19] [DEBUG] [Generation] Path "Path(x1=0, y1=5, x2=0, y2=32)" is out of map bounds.
+[2025-04-23 11:29:19] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=5, y1=13, x2=5, y2=13), Path(x1=15, y1=23, x2=15, y2=23), Path(x1=5, y1=14, x2=15, y2=14), Path(x1=15, y1=22, x2=15, y2=15)]
+[2025-04-23 11:29:19] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 2, 7}) to Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}).
+[2025-04-23 11:29:19] [INFO] [Generation] Could not connect next room: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}) to Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10}).
+[2025-04-23 11:29:19] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=17, y1=35, x2=17, y2=35), Path(x1=19, y1=32, x2=19, y2=32), Path(x1=18, y1=35, x2=18, y2=33), Path(x1=19, y1=33, x2=19, y2=33)]
+[2025-04-23 11:29:19] [DEBUG] [Generation] Connecting rooms, alternative: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 2, 4, 13}).
+[2025-04-23 11:29:19] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=45, y1=28, x2=45, y2=28), Path(x1=40, y1=2, x2=40, y2=2), Path(x1=46, y1=28, x2=46, y2=2), Path(x1=41, y1=2, x2=45, y2=2)]
+[2025-04-23 11:29:19] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10, 3}) to Room(id=3, x1=32, y1=1, x2=40, y2=10, room_type=None, connections={10, 3}).
+[2025-04-23 11:29:19] [INFO] [Generation] Finished connecting rooms.
+[2025-04-23 11:29:19] [INFO] [Generation] Not all rooms are connected to the entrance, trying to fix it.
+[2025-04-23 11:29:19] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=33, y1=38, x2=33, y2=38), Path(x1=43, y1=33, x2=43, y2=33), Path(x1=34, y1=38, x2=34, y2=34), Path(x1=43, y1=34, x2=35, y2=34)]
+[2025-04-23 11:29:19] [INFO] [Generation] Connected all missing sections to the entrance.
+[2025-04-23 11:29:19] [INFO] [Generation] Starting to place doors...
+[2025-04-23 11:29:19] [INFO] [Generation] Finished placing 15 doors.
+[2025-04-23 11:29:19] [INFO] [Generation] Starting to place walls...
+[2025-04-23 11:29:19] [INFO] [Generation] Finished placing walls.
+[2025-04-23 11:29:19] [INFO] [Rendering] Drawing pretty walls...
+[2025-04-23 11:29:19] [INFO] [Rendering] Finshed drawing 488 pretty walls.
+[2025-04-23 11:29:19] [INFO] [Rendering] Drawing simple walls...
+[2025-04-23 11:29:19] [INFO] [Rendering] Finshed drawing 488 simple walls.
+[2025-04-23 11:29:19] [INFO] [Rendering] Drawing floor...
+[2025-04-23 11:29:19] [INFO] [Rendering] Finished drawing floor.
+[2025-04-23 11:29:19] [INFO] [Rendering] Drawing pebbles...
+[2025-04-23 11:29:19] [INFO] [Rendering] Finished pebbles floor.
+[2025-04-23 11:29:19] [INFO] [Rendering] Drawing cracks...
+[2025-04-23 11:29:19] [INFO] [Rendering] Finished cracks floor.
+[2025-04-23 11:29:19] [INFO] [Rendering] Drawing doors...
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (27, 32)
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (20, 23)
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (27, 18)
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (18, 7)
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (12, 1)
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (5, 2)
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (5, 13)
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (15, 23)
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (17, 35)
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (19, 32)
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (45, 28)
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (40, 2)
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (32, 0)
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (33, 38)
+[2025-04-23 11:29:19] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (43, 33)
+[2025-04-23 11:29:19] [INFO] [Rendering] Finished drawing 15 doors.
+[2025-04-23 11:29:25] [INFO] [Generation] Starting to place rooms...
+[2025-04-23 11:29:25] [INFO] [Generation] Finished placing 8 rooms.
+[2025-04-23 11:29:25] [INFO] [Generation] Starting to connect rooms...
+[2025-04-23 11:29:25] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=0, x1=24, y1=34, x2=33, y2=39, room_type=None, connections={0, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4}).
+[2025-04-23 11:29:25] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4, 13}) to Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13}).
+[2025-04-23 11:29:25] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=27, y1=18, x2=27, y2=18), Path(x1=18, y1=7, x2=18, y2=7), Path(x1=28, y1=18, x2=28, y2=7), Path(x1=19, y1=7, x2=27, y2=7)]
+[2025-04-23 11:29:25] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13, 7}) to Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}).
+[2025-04-23 11:29:25] [DEBUG] [Generation] Connecing rooms, secondary straight line: [Path(x1=12, y1=1, x2=12, y2=1), Path(x1=5, y1=2, x2=5, y2=2), Path(x1=11, y1=1, x2=5, y2=1)]
+[2025-04-23 11:29:25] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={1, 13, 7}) to Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 7}).
+[2025-04-23 11:29:25] [DEBUG] [Generation] Path "Path(x1=0, y1=5, x2=0, y2=32)" is out of map bounds.
+[2025-04-23 11:29:25] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=5, y1=13, x2=5, y2=13), Path(x1=15, y1=23, x2=15, y2=23), Path(x1=5, y1=14, x2=15, y2=14), Path(x1=15, y1=22, x2=15, y2=15)]
+[2025-04-23 11:29:25] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 2, 7}) to Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}).
+[2025-04-23 11:29:25] [INFO] [Generation] Could not connect next room: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}) to Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10}).
+[2025-04-23 11:29:25] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=17, y1=35, x2=17, y2=35), Path(x1=19, y1=32, x2=19, y2=32), Path(x1=18, y1=35, x2=18, y2=33), Path(x1=19, y1=33, x2=19, y2=33)]
+[2025-04-23 11:29:25] [DEBUG] [Generation] Connecting rooms, alternative: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 2, 4, 13}).
+[2025-04-23 11:29:25] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=45, y1=28, x2=45, y2=28), Path(x1=40, y1=2, x2=40, y2=2), Path(x1=46, y1=28, x2=46, y2=2), Path(x1=41, y1=2, x2=45, y2=2)]
+[2025-04-23 11:29:25] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10, 3}) to Room(id=3, x1=32, y1=1, x2=40, y2=10, room_type=None, connections={10, 3}).
+[2025-04-23 11:29:25] [INFO] [Generation] Finished connecting rooms.
+[2025-04-23 11:29:25] [INFO] [Generation] Not all rooms are connected to the entrance, trying to fix it.
+[2025-04-23 11:29:25] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=33, y1=38, x2=33, y2=38), Path(x1=43, y1=33, x2=43, y2=33), Path(x1=34, y1=38, x2=34, y2=34), Path(x1=43, y1=34, x2=35, y2=34)]
+[2025-04-23 11:29:25] [INFO] [Generation] Connected all missing sections to the entrance.
+[2025-04-23 11:29:25] [INFO] [Generation] Starting to place doors...
+[2025-04-23 11:29:25] [INFO] [Generation] Finished placing 15 doors.
+[2025-04-23 11:29:25] [INFO] [Generation] Starting to place walls...
+[2025-04-23 11:29:25] [INFO] [Generation] Finished placing walls.
+[2025-04-23 11:29:25] [INFO] [Rendering] Drawing pretty walls...
+[2025-04-23 11:29:25] [INFO] [Rendering] Finshed drawing 488 pretty walls.
+[2025-04-23 11:29:25] [INFO] [Rendering] Drawing simple walls...
+[2025-04-23 11:29:25] [INFO] [Rendering] Finshed drawing 488 simple walls.
+[2025-04-23 11:29:25] [INFO] [Rendering] Drawing floor...
+[2025-04-23 11:29:25] [INFO] [Rendering] Finished drawing floor.
+[2025-04-23 11:29:25] [INFO] [Rendering] Drawing pebbles...
+[2025-04-23 11:29:25] [INFO] [Rendering] Finished pebbles floor.
+[2025-04-23 11:29:25] [INFO] [Rendering] Drawing cracks...
+[2025-04-23 11:29:25] [INFO] [Rendering] Finished cracks floor.
+[2025-04-23 11:29:25] [INFO] [Rendering] Drawing doors...
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (27, 32)
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (20, 23)
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (27, 18)
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (18, 7)
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (12, 1)
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (5, 2)
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (5, 13)
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (15, 23)
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (17, 35)
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (19, 32)
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (45, 28)
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (40, 2)
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (32, 0)
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (33, 38)
+[2025-04-23 11:29:25] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (43, 33)
+[2025-04-23 11:29:25] [INFO] [Rendering] Finished drawing 15 doors.
+[2025-04-23 11:29:26] [INFO] [Generation] Starting to place rooms...
+[2025-04-23 11:29:26] [INFO] [Generation] Finished placing 8 rooms.
+[2025-04-23 11:29:26] [INFO] [Generation] Starting to connect rooms...
+[2025-04-23 11:29:26] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=0, x1=24, y1=34, x2=33, y2=39, room_type=None, connections={0, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4}).
+[2025-04-23 11:29:26] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4, 13}) to Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13}).
+[2025-04-23 11:29:26] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=27, y1=18, x2=27, y2=18), Path(x1=18, y1=7, x2=18, y2=7), Path(x1=28, y1=18, x2=28, y2=7), Path(x1=19, y1=7, x2=27, y2=7)]
+[2025-04-23 11:29:26] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13, 7}) to Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}).
+[2025-04-23 11:29:26] [DEBUG] [Generation] Connecing rooms, secondary straight line: [Path(x1=12, y1=1, x2=12, y2=1), Path(x1=5, y1=2, x2=5, y2=2), Path(x1=11, y1=1, x2=5, y2=1)]
+[2025-04-23 11:29:26] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={1, 13, 7}) to Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 7}).
+[2025-04-23 11:29:26] [DEBUG] [Generation] Path "Path(x1=0, y1=5, x2=0, y2=32)" is out of map bounds.
+[2025-04-23 11:29:26] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=5, y1=13, x2=5, y2=13), Path(x1=15, y1=23, x2=15, y2=23), Path(x1=5, y1=14, x2=15, y2=14), Path(x1=15, y1=22, x2=15, y2=15)]
+[2025-04-23 11:29:26] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 2, 7}) to Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}).
+[2025-04-23 11:29:26] [INFO] [Generation] Could not connect next room: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}) to Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10}).
+[2025-04-23 11:29:26] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=17, y1=35, x2=17, y2=35), Path(x1=19, y1=32, x2=19, y2=32), Path(x1=18, y1=35, x2=18, y2=33), Path(x1=19, y1=33, x2=19, y2=33)]
+[2025-04-23 11:29:26] [DEBUG] [Generation] Connecting rooms, alternative: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 2, 4, 13}).
+[2025-04-23 11:29:26] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=45, y1=28, x2=45, y2=28), Path(x1=40, y1=2, x2=40, y2=2), Path(x1=46, y1=28, x2=46, y2=2), Path(x1=41, y1=2, x2=45, y2=2)]
+[2025-04-23 11:29:26] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10, 3}) to Room(id=3, x1=32, y1=1, x2=40, y2=10, room_type=None, connections={10, 3}).
+[2025-04-23 11:29:26] [INFO] [Generation] Finished connecting rooms.
+[2025-04-23 11:29:26] [INFO] [Generation] Not all rooms are connected to the entrance, trying to fix it.
+[2025-04-23 11:29:26] [DEBUG] [Generation] Path "Path(x1=30, y1=1, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:26] [DEBUG] [Generation] Path "Path(x1=36, y1=-1, x2=19, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:26] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=31, y1=2, x2=31, y2=2), Path(x1=18, y1=3, x2=18, y2=3), Path(x1=30, y1=2, x2=30, y2=3), Path(x1=19, y1=3, x2=29, y2=3)]
+[2025-04-23 11:29:26] [INFO] [Generation] Connected all missing sections to the entrance.
+[2025-04-23 11:29:26] [INFO] [Generation] Starting to place doors...
+[2025-04-23 11:29:26] [INFO] [Generation] Finished placing 15 doors.
+[2025-04-23 11:29:26] [INFO] [Generation] Starting to place walls...
+[2025-04-23 11:29:26] [INFO] [Generation] Finished placing walls.
+[2025-04-23 11:29:26] [INFO] [Rendering] Drawing pretty walls...
+[2025-04-23 11:29:26] [INFO] [Rendering] Finshed drawing 486 pretty walls.
+[2025-04-23 11:29:26] [INFO] [Rendering] Drawing simple walls...
+[2025-04-23 11:29:26] [INFO] [Rendering] Finshed drawing 486 simple walls.
+[2025-04-23 11:29:26] [INFO] [Rendering] Drawing floor...
+[2025-04-23 11:29:26] [INFO] [Rendering] Finished drawing floor.
+[2025-04-23 11:29:26] [INFO] [Rendering] Drawing pebbles...
+[2025-04-23 11:29:26] [INFO] [Rendering] Finished pebbles floor.
+[2025-04-23 11:29:26] [INFO] [Rendering] Drawing cracks...
+[2025-04-23 11:29:26] [INFO] [Rendering] Finished cracks floor.
+[2025-04-23 11:29:26] [INFO] [Rendering] Drawing doors...
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (27, 32)
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (20, 23)
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (27, 18)
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (18, 7)
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (12, 1)
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (5, 2)
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (5, 13)
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (15, 23)
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (17, 35)
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (19, 32)
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (45, 28)
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (40, 2)
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (32, 39)
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (31, 2)
+[2025-04-23 11:29:26] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (18, 3)
+[2025-04-23 11:29:26] [INFO] [Rendering] Finished drawing 15 doors.
+[2025-04-23 11:29:30] [INFO] [Generation] Starting to place rooms...
+[2025-04-23 11:29:30] [INFO] [Generation] Finished placing 8 rooms.
+[2025-04-23 11:29:30] [INFO] [Generation] Starting to connect rooms...
+[2025-04-23 11:29:30] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=0, x1=24, y1=34, x2=33, y2=39, room_type=None, connections={0, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4}).
+[2025-04-23 11:29:30] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4, 13}) to Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13}).
+[2025-04-23 11:29:30] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=27, y1=18, x2=27, y2=18), Path(x1=18, y1=7, x2=18, y2=7), Path(x1=28, y1=18, x2=28, y2=7), Path(x1=19, y1=7, x2=27, y2=7)]
+[2025-04-23 11:29:30] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13, 7}) to Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}).
+[2025-04-23 11:29:30] [DEBUG] [Generation] Connecing rooms, secondary straight line: [Path(x1=12, y1=1, x2=12, y2=1), Path(x1=5, y1=2, x2=5, y2=2), Path(x1=11, y1=1, x2=5, y2=1)]
+[2025-04-23 11:29:30] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={1, 13, 7}) to Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 7}).
+[2025-04-23 11:29:30] [DEBUG] [Generation] Path "Path(x1=0, y1=5, x2=0, y2=32)" is out of map bounds.
+[2025-04-23 11:29:30] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=5, y1=13, x2=5, y2=13), Path(x1=15, y1=23, x2=15, y2=23), Path(x1=5, y1=14, x2=15, y2=14), Path(x1=15, y1=22, x2=15, y2=15)]
+[2025-04-23 11:29:30] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 2, 7}) to Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}).
+[2025-04-23 11:29:30] [INFO] [Generation] Could not connect next room: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}) to Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10}).
+[2025-04-23 11:29:30] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=17, y1=35, x2=17, y2=35), Path(x1=19, y1=32, x2=19, y2=32), Path(x1=18, y1=35, x2=18, y2=33), Path(x1=19, y1=33, x2=19, y2=33)]
+[2025-04-23 11:29:30] [DEBUG] [Generation] Connecting rooms, alternative: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 2, 4, 13}).
+[2025-04-23 11:29:30] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=45, y1=28, x2=45, y2=28), Path(x1=40, y1=2, x2=40, y2=2), Path(x1=46, y1=28, x2=46, y2=2), Path(x1=41, y1=2, x2=45, y2=2)]
+[2025-04-23 11:29:30] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10, 3}) to Room(id=3, x1=32, y1=1, x2=40, y2=10, room_type=None, connections={10, 3}).
+[2025-04-23 11:29:30] [INFO] [Generation] Finished connecting rooms.
+[2025-04-23 11:29:30] [INFO] [Generation] Not all rooms are connected to the entrance, trying to fix it.
+[2025-04-23 11:29:30] [DEBUG] [Generation] Path "Path(x1=38, y1=-1, x2=13, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:30] [DEBUG] [Generation] Path "Path(x1=30, y1=4, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:30] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=31, y1=6, x2=31, y2=6), Path(x1=18, y1=1, x2=18, y2=1), Path(x1=30, y1=6, x2=19, y2=6), Path(x1=19, y1=1, x2=19, y2=5)]
+[2025-04-23 11:29:30] [INFO] [Generation] Connected all missing sections to the entrance.
+[2025-04-23 11:29:30] [INFO] [Generation] Starting to place doors...
+[2025-04-23 11:29:30] [INFO] [Generation] Finished placing 15 doors.
+[2025-04-23 11:29:30] [INFO] [Generation] Starting to place walls...
+[2025-04-23 11:29:30] [INFO] [Generation] Finished placing walls.
+[2025-04-23 11:29:30] [INFO] [Rendering] Drawing pretty walls...
+[2025-04-23 11:29:30] [INFO] [Rendering] Finshed drawing 520 pretty walls.
+[2025-04-23 11:29:30] [INFO] [Rendering] Drawing simple walls...
+[2025-04-23 11:29:30] [INFO] [Rendering] Finshed drawing 520 simple walls.
+[2025-04-23 11:29:30] [INFO] [Rendering] Drawing floor...
+[2025-04-23 11:29:30] [INFO] [Rendering] Finished drawing floor.
+[2025-04-23 11:29:30] [INFO] [Rendering] Drawing pebbles...
+[2025-04-23 11:29:30] [INFO] [Rendering] Finished pebbles floor.
+[2025-04-23 11:29:30] [INFO] [Rendering] Drawing cracks...
+[2025-04-23 11:29:30] [INFO] [Rendering] Finished cracks floor.
+[2025-04-23 11:29:30] [INFO] [Rendering] Drawing doors...
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (27, 32)
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (20, 23)
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (27, 18)
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (18, 7)
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (12, 1)
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (5, 2)
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (5, 13)
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (15, 23)
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (17, 35)
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (19, 32)
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (45, 28)
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (40, 2)
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (23, 38)
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (31, 6)
+[2025-04-23 11:29:30] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (18, 1)
+[2025-04-23 11:29:30] [INFO] [Rendering] Finished drawing 15 doors.
+[2025-04-23 11:29:32] [INFO] [Generation] Starting to place rooms...
+[2025-04-23 11:29:32] [INFO] [Generation] Finished placing 8 rooms.
+[2025-04-23 11:29:32] [INFO] [Generation] Starting to connect rooms...
+[2025-04-23 11:29:32] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=0, x1=24, y1=34, x2=33, y2=39, room_type=None, connections={0, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4}).
+[2025-04-23 11:29:32] [DEBUG] [Generation] Connecting rooms, adjacent: Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 4, 13}) to Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13}).
+[2025-04-23 11:29:32] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=27, y1=18, x2=27, y2=18), Path(x1=18, y1=7, x2=18, y2=7), Path(x1=28, y1=18, x2=28, y2=7), Path(x1=19, y1=7, x2=27, y2=7)]
+[2025-04-23 11:29:32] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=13, x1=18, y1=11, x2=27, y2=23, room_type=None, connections={4, 13, 7}) to Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={13, 7}).
+[2025-04-23 11:29:32] [DEBUG] [Generation] Connecing rooms, secondary straight line: [Path(x1=12, y1=1, x2=12, y2=1), Path(x1=5, y1=2, x2=5, y2=2), Path(x1=11, y1=1, x2=5, y2=1)]
+[2025-04-23 11:29:32] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=7, x1=13, y1=1, x2=18, y2=8, room_type=None, connections={1, 13, 7}) to Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 7}).
+[2025-04-23 11:29:32] [DEBUG] [Generation] Path "Path(x1=0, y1=5, x2=0, y2=32)" is out of map bounds.
+[2025-04-23 11:29:32] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=5, y1=13, x2=5, y2=13), Path(x1=15, y1=23, x2=15, y2=23), Path(x1=5, y1=14, x2=15, y2=14), Path(x1=15, y1=22, x2=15, y2=15)]
+[2025-04-23 11:29:32] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=1, x1=2, y1=3, x2=8, y2=13, room_type=None, connections={1, 2, 7}) to Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}).
+[2025-04-23 11:29:32] [INFO] [Generation] Could not connect next room: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2}) to Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10}).
+[2025-04-23 11:29:32] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=17, y1=35, x2=17, y2=35), Path(x1=19, y1=32, x2=19, y2=32), Path(x1=18, y1=35, x2=18, y2=33), Path(x1=19, y1=33, x2=19, y2=33)]
+[2025-04-23 11:29:32] [DEBUG] [Generation] Connecting rooms, alternative: Room(id=2, x1=5, y1=24, x2=17, y2=36, room_type=None, connections={1, 2, 4}) to Room(id=4, x1=19, y1=24, x2=28, y2=32, room_type=None, connections={0, 2, 4, 13}).
+[2025-04-23 11:29:32] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=45, y1=28, x2=45, y2=28), Path(x1=40, y1=2, x2=40, y2=2), Path(x1=46, y1=28, x2=46, y2=2), Path(x1=41, y1=2, x2=45, y2=2)]
+[2025-04-23 11:29:32] [DEBUG] [Generation] Connecting rooms, nearest: Room(id=10, x1=36, y1=24, x2=45, y2=33, room_type=None, connections={10, 3}) to Room(id=3, x1=32, y1=1, x2=40, y2=10, room_type=None, connections={10, 3}).
+[2025-04-23 11:29:32] [INFO] [Generation] Finished connecting rooms.
+[2025-04-23 11:29:32] [INFO] [Generation] Not all rooms are connected to the entrance, trying to fix it.
+[2025-04-23 11:29:32] [DEBUG] [Generation] Path "Path(x1=38, y1=-1, x2=13, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:32] [DEBUG] [Generation] Path "Path(x1=30, y1=4, x2=30, y2=-1)" is out of map bounds.
+[2025-04-23 11:29:32] [DEBUG] [Generation] Connecing rooms, L-shape: [Path(x1=31, y1=6, x2=31, y2=6), Path(x1=18, y1=1, x2=18, y2=1), Path(x1=30, y1=6, x2=19, y2=6), Path(x1=19, y1=1, x2=19, y2=5)]
+[2025-04-23 11:29:32] [INFO] [Generation] Connected all missing sections to the entrance.
+[2025-04-23 11:29:32] [INFO] [Generation] Starting to place doors...
+[2025-04-23 11:29:32] [INFO] [Generation] Finished placing 15 doors.
+[2025-04-23 11:29:32] [INFO] [Generation] Starting to place walls...
+[2025-04-23 11:29:32] [INFO] [Generation] Finished placing walls.
+[2025-04-23 11:29:32] [INFO] [Rendering] Drawing pretty walls...
+[2025-04-23 11:29:32] [INFO] [Rendering] Finshed drawing 506 pretty walls.
+[2025-04-23 11:29:32] [INFO] [Rendering] Drawing simple walls...
+[2025-04-23 11:29:32] [INFO] [Rendering] Finshed drawing 506 simple walls.
+[2025-04-23 11:29:32] [INFO] [Rendering] Drawing floor...
+[2025-04-23 11:29:32] [INFO] [Rendering] Finished drawing floor.
+[2025-04-23 11:29:32] [INFO] [Rendering] Drawing pebbles...
+[2025-04-23 11:29:32] [INFO] [Rendering] Finished pebbles floor.
+[2025-04-23 11:29:32] [INFO] [Rendering] Drawing cracks...
+[2025-04-23 11:29:32] [INFO] [Rendering] Finished cracks floor.
+[2025-04-23 11:29:32] [INFO] [Rendering] Drawing doors...
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (27, 32)
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (20, 23)
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (27, 18)
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (18, 7)
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (12, 1)
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (5, 2)
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (5, 13)
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (15, 23)
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (17, 35)
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing horizontal DoorType.WOOD door at (19, 32)
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (45, 28)
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (40, 2)
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (33, 38)
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (31, 6)
+[2025-04-23 11:29:32] [DEBUG] [Rendering] Drawing vertical DoorType.WOOD door at (18, 1)
+[2025-04-23 11:29:32] [INFO] [Rendering] Finished drawing 15 doors.

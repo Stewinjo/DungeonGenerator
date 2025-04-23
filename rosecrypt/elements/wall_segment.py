@@ -7,7 +7,7 @@ between tiles, with optional Foundry VTT export metadata.
 
 from typing import Tuple, Optional
 from dataclasses import dataclass
-from rosecrypt.generation.enums.door_type import DoorType
+from rosecrypt.generation.enums import DoorType
 
 # pylint: disable=too-many-instance-attributes
 @dataclass

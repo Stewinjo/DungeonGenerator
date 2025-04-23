@@ -9,7 +9,7 @@ and offer geometric utility methods.
 from typing import Set, List, Tuple
 from dataclasses import dataclass, field
 from rosecrypt.enums import Direction
-from rosecrypt.generation.enums.room_type import RoomType
+from rosecrypt.generation.enums import RoomType
 
 @dataclass()
 class Room:

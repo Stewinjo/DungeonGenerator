@@ -7,7 +7,6 @@ These tiles are placed on the canvas for visual decoration or structural guidanc
 
 from dataclasses import dataclass
 
-
 @dataclass
 class Tile:
     """

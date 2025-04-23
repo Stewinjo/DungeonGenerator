@@ -9,7 +9,11 @@ The dungeon is designed to support rendering, export, and dynamic procedural gen
 """
 
 from typing import List
-from .elements import WallSegment, Light, Note, Tile, Door
+from rosecrypt.elements.wall_segment import WallSegment
+from rosecrypt.elements.light import Light
+from rosecrypt.elements.note import Note
+from rosecrypt.elements.tile import Tile
+from rosecrypt.elements.door import Door
 
 # pylint: disable=too-many-instance-attributes
 class Dungeon:

@@ -30,6 +30,7 @@ from rosecrypt.generation.enums.room_type import RoomType
 
 log = setup_logger(__name__, category="Generation")
 
+#pylint: disable=too-few-public-methods
 class DungeonGenerator:
     """
     Main generator class for producing procedural dungeons.
@@ -81,6 +82,7 @@ class DungeonGenerator:
             log.info("Not all rooms are connected to the entrance, trying to fix it.")
             self._place_missing_hallways(dungeon)
 
+        #pylint: disable=fixme
         # TODO: Step 3: Populate all Rooms with appropriate RoomTypes and DoorTypes
 
         # Step 4: Add doors
@@ -126,6 +128,7 @@ class DungeonGenerator:
         log.error("Could not place any rooms!")
         return False
 
+    #pylint: disable=too-many-branches disable=too-many-statements
     def _place_hallways(self, dungeon: Dungeon) -> bool:
         """
         Connects rooms together using hallway segments.
@@ -155,22 +158,37 @@ class DungeonGenerator:
                     nearest: int = i
                     nearest_dist = dist
 
-            r1, r2 = self.rooms[current], self.rooms[nearest]
             success = False
 
             # Try to connect rooms that are adjacent
-            hallway: Hallway | None = self._connect_adjacent_rooms(dungeon, r1, r2)
+            hallway: Hallway | None = self._connect_adjacent_rooms(
+                dungeon,
+                self.rooms[current],
+                self.rooms[nearest]
+                )
             if hallway:
-                log.debug('Connecting rooms, adjacent: %s to %s.', r1, r2)
+                log.debug(
+                    'Connecting rooms, adjacent: %s to %s.',
+                    self.rooms[current],
+                    self.rooms[nearest]
+                    )
                 success = True
             else:
                 # Try to connect rooms that are not adjacent
-                hallway = self._connect_rooms(dungeon, r1, r2)
+                hallway = self._connect_rooms(dungeon, self.rooms[current], self.rooms[nearest])
                 if hallway:
-                    log.debug('Connecting rooms, nearest: %s to %s.', r1, r2)
+                    log.debug(
+                        'Connecting rooms, nearest: %s to %s.',
+                        self.rooms[current],
+                        self.rooms[nearest]
+                        )
                     success = True
                 else:
-                    log.info('Could not connect next room: %s to %s.', r1, r2)
+                    log.info(
+                        'Could not connect next room: %s to %s.',
+                        self.rooms[current],
+                        self.rooms[nearest]
+                        )
                     # Try connecting to any already connected room instead
 
                     for alt in sorted(
@@ -181,32 +199,33 @@ class DungeonGenerator:
                             )
                         ):
 
-                        alt_room = self.rooms[alt]
-
                         # Try to connect rooms that are adjacent
                         hallway = self._connect_adjacent_rooms(
                             dungeon,
                             self.rooms[nearest],
-                            alt_room
+                            self.rooms[alt]
                             )
                         if hallway:
                             log.debug(
                                 'Connecting rooms, adjacent: %s to %s.',
                                 self.rooms[nearest],
-                                alt_room
+                                self.rooms[alt]
                                 )
                             success = True
                             break
-                        else:
-                            # Try to connect rooms that are not adjacent
-                            hallway = self._connect_rooms(dungeon, r1, alt_room)
-                            if hallway:
-                                log.debug('Connecting rooms, alternative: %s to %s.', r1, alt_room)
-                                success = True
-                                break
+                        # Try to connect rooms that are not adjacent
+                        hallway = self._connect_rooms(dungeon, self.rooms[current], self.rooms[alt])
+                        if hallway:
+                            log.debug(
+                                'Connecting rooms, alternative: %s to %s.',
+                                self.rooms[current],
+                                self.rooms[alt]
+                                )
+                            success = True
+                            break
                     else:
                         # Still no success
-                        log.warning('Could not connect room %s to any other.', r1)
+                        log.warning('Could not connect room %s to any other.', self.rooms[current])
                         remaining.remove(nearest)
                         current = nearest
                         failure = True
@@ -371,6 +390,7 @@ class DungeonGenerator:
                         return True
                     connected_ids.update(room.get_connected_room_ids_by_extension(self.rooms))
 
+        #pylint: disable=fixme
         # TODO: Implement additional fallback logic
 
         log.warning("Could not connect all sections/rooms to the entrance!")
@@ -439,6 +459,7 @@ class DungeonGenerator:
 
         return None
 
+    #pylint: disable=too-many-arguments disable=too-many-positional-arguments disable=too-many-locals
     def _connect_tiles(
             self,
             dungeon: Dungeon,
@@ -525,8 +546,7 @@ class DungeonGenerator:
                 else:
                     dungeon.carve_tile(p.x1, p.y1)
             return hallway
-        else:
-            return None
+        return None
 
     def _connect_rooms(self, dungeon: Dungeon, r1: Room, r2: Room) -> Hallway | None:
         """
@@ -640,6 +660,7 @@ class DungeonGenerator:
         full_set = {room.id for room in self.rooms}
         return self.rooms[0].get_connected_room_ids_by_extension(self.rooms) == full_set
 
+    #pylint: disable=too-many-positional-arguments
     def __can_connect(
             self,
             dungeon: Dungeon,

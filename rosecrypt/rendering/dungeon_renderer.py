@@ -19,6 +19,7 @@ from rosecrypt.rendering.rendering_settings import RenderingSettings
 
 log = setup_logger(__name__, category="Rendering")
 
+#pylint: disable=too-few-public-methods
 class DungeonRenderer():
     """
     Renders a Dungeon instance to a styled image using configurable rendering settings.
@@ -150,7 +151,7 @@ class DungeonRenderer():
                             width=1
                             )
 
-
+    #pylint: disable=too-many-locals
     def _draw_door(self, door: Door):
         """
         Draws a visual representation of a door, including color and frame.
@@ -263,6 +264,7 @@ class DungeonRenderer():
                 fill=door_color.get_hex_l(), width=2
             )
 
+    #pylint: disable=too-many-locals
     def _draw_wall_block_ring(self, wall: WallSegment):
         """
         Draws a ring of overlapping bricks to simulate rough stonework for a wall.
@@ -324,6 +326,7 @@ class DungeonRenderer():
             width=self.settings.WALL_THICKNESS
             )
 
+    #pylint: disable=too-many-locals
     def _draw_pebbles(self):
         """
         Randomly draws scattered pebbles on floor tiles using Perlin noise.
@@ -335,6 +338,7 @@ class DungeonRenderer():
         scale = 0.9
         threshold = 0.4
 
+        #pylint: disable=too-many-nested-blocks
         for y in range(self.dungeon.height):
             for x in range(self.dungeon.width):
                 if self.dungeon.grid[y][x] != 1:
@@ -372,6 +376,7 @@ class DungeonRenderer():
                                 fill=self.settings.style.ink_color.get_hex_l()
                                 )
 
+    #pylint: disable=too-many-locals
     def _draw_cracks(self, aging_level: RenderingTag = RenderingTag.OLD):
         """
         Draws cracks extending outward from walls based on the given aging level.

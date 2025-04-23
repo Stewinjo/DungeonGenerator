@@ -14,13 +14,15 @@ import os
 from typing import List, Tuple
 
 from rosecrypt.dungeon import Dungeon
-from rosecrypt.elements import WallSegment, Door
+from rosecrypt.elements.wall_segment import WallSegment
+from rosecrypt.elements.door import Door
 from rosecrypt.logger import setup_logger
 from rosecrypt.rendering.dungeon_renderer import DungeonRenderer
 from rosecrypt.exporting.exporter_settings import ExporterSettings
 
 log = setup_logger(__name__, category="Exporting")
 
+#pylint: disable=too-few-public-methods
 class DungeonExporter:
     """
     Exports a dungeon object into Foundry VTT-compatible formats.

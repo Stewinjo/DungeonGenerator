@@ -7,7 +7,6 @@ These notes are exportable to Foundry VTT and can display tooltips or icons in-g
 
 from dataclasses import dataclass
 
-
 @dataclass
 class Note:
     """

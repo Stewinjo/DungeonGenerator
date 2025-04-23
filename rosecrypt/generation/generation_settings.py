@@ -8,8 +8,9 @@ and room constraints, all of which influence dungeon structure and complexity.
 
 from dataclasses import dataclass
 from typing import Set
-from rosecrypt.generation.enums.generation_tag import GenerationTag
+from rosecrypt.generation.enums import GenerationTag
 
+# pylint: disable=too-many-instance-attributes
 @dataclass
 class GenerationSettings:
     """
