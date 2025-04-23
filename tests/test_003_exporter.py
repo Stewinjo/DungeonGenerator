@@ -8,11 +8,15 @@ exported to Foundry VTT's format, including both the scene JSON and image file.
 import unittest
 import os
 import uuid
+
+from rosecrypt.logger import setup_logger
 from rosecrypt.generation.dungeon_generator import DungeonGenerator, GenerationSettings
 from rosecrypt.generation.enums.generation_tag import GenerationTag
 from rosecrypt.exporting.dungeon_exporter import DungeonExporter, ExporterSettings
 from rosecrypt.rendering.dungeon_renderer import RenderingSettings
 from rosecrypt.rendering.enums.rendering_tag import RenderingTag
+
+log = setup_logger(__name__, category="Exporting")
 
 class TestDungeonExporter(unittest.TestCase):
     """
@@ -36,6 +40,13 @@ class TestDungeonExporter(unittest.TestCase):
         # Generate dungeon with dummy settings
         width, height = 20, 20
         seed = uuid.uuid4().hex[:8]
+        log.info(
+            "Trying to export dungeon with seed %s (%s, %s)",
+            seed,
+            width,
+            height
+            )
+
         generation_tags = GenerationTag.make_full_set()
         generation_settings = GenerationSettings.from_gui(width, height, seed, generation_tags)
         dungeon = DungeonGenerator(generation_settings).generate_dungeon(width, height)

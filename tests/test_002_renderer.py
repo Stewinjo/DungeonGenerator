@@ -8,11 +8,15 @@ from generated dungeon structures using default rendering settings.
 import unittest
 import uuid
 from PIL import Image
+
+from rosecrypt.logger import setup_logger
 from rosecrypt.generation.dungeon_generator import DungeonGenerator, GenerationSettings
 from rosecrypt.generation.enums.generation_tag import GenerationTag
 from rosecrypt.rendering.dungeon_renderer import DungeonRenderer
 from rosecrypt.rendering.rendering_settings import RenderingSettings
 from rosecrypt.rendering.enums.rendering_tag import RenderingTag
+
+log = setup_logger(__name__, category="Rendering")
 
 class TestDungeonRenderer(unittest.TestCase):
     """
@@ -30,6 +34,13 @@ class TestDungeonRenderer(unittest.TestCase):
 
         width, height = 40, 40
         seed = uuid.uuid4().hex[:8]
+        log.info(
+            "Trying to render dungeon with seed %s (%s, %s)",
+            seed,
+            width,
+            height
+            )
+
         generation_tags = GenerationTag.make_full_set()
         generation_settings = GenerationSettings.from_gui(width, height, seed, generation_tags)
         dungeon = DungeonGenerator(generation_settings).generate_dungeon(width, height)

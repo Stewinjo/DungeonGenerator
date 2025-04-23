@@ -11,6 +11,8 @@ Usage:
 """
 
 import logging
+import os
+import sys
 from typing import Optional
 import colorlog
 
@@ -24,10 +26,10 @@ class CategoryFilter(logging.Filter):
     """
     def __init__(self, category: Optional[str] = None):
         """
-        A logging filter that restricts log messages to a specific category.
+        Initializes the category filter with a specified category.
 
-        Attributes:
-            category (Optional[str]): The category to filter by. If None, all records are allowed.
+        :param category: The category to filter by. If None, all categories are allowed.
+        :type category: Optional[str]
         """
         super().__init__()
         self.category = category
@@ -53,6 +55,8 @@ def setup_logger(name: str, category: str = "General") -> logging.Logger:
     info-level and above to the console using colored formatting.
     The `category` is injected into each log record.
 
+    During test runs (e.g., Pytest), file logging is disabled and all logs go to console.
+
     :param name: The name of the logger, usually `__name__`.
     :type name: str
     :param category: The category label to associate with log messages.
@@ -72,11 +76,6 @@ def setup_logger(name: str, category: str = "General") -> logging.Logger:
         datefmt="%Y-%m-%d %H:%M:%S"
     )
 
-    # === File handler ===
-    file_handler = logging.FileHandler("rosecrypt.log", encoding="utf-8")
-    file_handler.setLevel(logging.DEBUG)
-    file_handler.setFormatter(formatter)
-
     # === Console handler with colorlog ===
     color_formatter = colorlog.ColoredFormatter(
         fmt="%(log_color)s[%(asctime)s] [%(levelname)s] [%(category)s] %(message)s",
@@ -91,12 +90,16 @@ def setup_logger(name: str, category: str = "General") -> logging.Logger:
     )
 
     console_handler = colorlog.StreamHandler()
-    console_handler.setLevel(logging.INFO)  # Console shows less than file
+    console_handler.setLevel(logging.DEBUG if _is_testing() else logging.INFO)
     console_handler.setFormatter(color_formatter)
-
-    # Attach
-    logger.addHandler(file_handler)
     logger.addHandler(console_handler)
+
+    # === File handler only if not running tests ===
+    if not _is_testing():
+        file_handler = logging.FileHandler("rosecrypt.log", encoding="utf-8")
+        file_handler.setLevel(logging.DEBUG)
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
 
     # Inject category into logs automatically
     def inject_category(record):
@@ -106,3 +109,16 @@ def setup_logger(name: str, category: str = "General") -> logging.Logger:
     logger.addFilter(inject_category)
 
     return logger
+
+def _is_testing() -> bool:
+    """
+    Determines whether the code is currently running under a test framework.
+
+    :return: True if the current environment appears to be a test run.
+    :rtype: bool
+    """
+    return (
+        "PYTEST_CURRENT_TEST" in os.environ or
+        any("unittest" in arg for arg in sys.argv) or
+        "pytest" in sys.modules
+    )

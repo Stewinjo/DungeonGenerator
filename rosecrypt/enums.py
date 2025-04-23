@@ -12,7 +12,7 @@ These enums are used for spatial reasoning, wall and hallway placement, and path
 
 
 from enum import Enum
-from typing import Tuple
+from typing import Tuple, List, Set, Any
 
 class Direction(Enum):
     """
@@ -74,3 +74,90 @@ class Direction(Enum):
             Direction.LEFT: Direction.RIGHT,
             Direction.RIGHT: Direction.LEFT,
         }[self]
+
+class Tag(Enum):
+    """
+    Base class for generation and rendering tags.
+
+    Attributes:
+        category (str): Descriptive grouping of the tag (e.g., Size, Density).
+        data (Any): Any associated metadata, such as a tuple or numeric value.
+    """
+
+    def __new__(cls, category: str, data: Any):
+        obj = object.__new__(cls)
+        obj._value_ = len(cls.__members__)
+        obj.category = category
+        obj.data = data
+        return obj
+
+    def __str__(self):
+        return self.name
+
+    @classmethod
+    def toggle_tag(
+        cls,
+        active_tags: Set['Tag'],
+        new_tag: 'Tag'
+    ) -> Set['Tag']:
+        """
+        Adds or removes a tag from the set, respecting exclusivity rules.
+
+        Args:
+            active_tags: The current set of tags.
+            new_tag: The tag to toggle.
+
+        Returns:
+            Updated tag set.
+        """
+        updated = set(active_tags)
+        if new_tag in updated:
+            updated.remove(new_tag)
+        else:
+            for group in cls.mutually_exclusive_groups():
+                if new_tag in group:
+                    updated -= group
+            updated.add(new_tag)
+        return updated
+
+    @staticmethod
+    def mutually_exclusive_groups() -> List[Set['Tag']]:
+        """
+        Define tag groups that are mutually exclusive.
+
+        Subclasses should override this.
+
+        Returns:
+            A list of mutually exclusive tag sets.
+        """
+        return []
+
+    @classmethod
+    def get_tag_by_category(cls, tags: Set['Tag'], category: str) -> 'Tag':
+        """
+        Returns the tag from a set that matches the given category, or None.
+
+        Args:
+            tags: The tag set to search.
+            category: The category to look for.
+
+        Returns:
+            The matching tag or None.
+        """
+        return next((tag for tag in tags if tag.category == category), None)
+
+    @classmethod
+    def make_full_set(cls) -> Set['Tag']:
+        """
+        Returns a default set of tags, selecting the first tag from each mutually exclusive group.
+
+        Can be overridden for more specific behavior (e.g., random choice or fixed tag defaults).
+
+        Returns:
+            Set[Tag]: A set containing one tag from each mutually exclusive group.
+        """
+        full_set = set()
+        for group in cls.mutually_exclusive_groups():
+            tag = next(iter(group))  # Pick the first one deterministically
+            full_set.add(tag)
+        return full_set

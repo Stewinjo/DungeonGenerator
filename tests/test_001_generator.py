@@ -7,8 +7,12 @@ have correct dimensions and conform to basic structural expectations.
 
 import unittest
 import uuid
+
+from rosecrypt.logger import setup_logger
 from rosecrypt.generation.dungeon_generator import DungeonGenerator, GenerationSettings
 from rosecrypt.generation.enums.generation_tag import GenerationTag
+
+log = setup_logger(__name__, category="Generation")
 
 class TestDungeonGenerator(unittest.TestCase):
     """
@@ -27,6 +31,13 @@ class TestDungeonGenerator(unittest.TestCase):
 
         width, height = 100, 100
         seed = uuid.uuid4().hex[:8]
+        log.info(
+            "Trying to generate dungeon with seed %s (%s, %s)",
+            seed,
+            width,
+            height
+            )
+
         settings = GenerationSettings.from_gui(
             width=width,
             height=height,

@@ -7,10 +7,11 @@ sizes, density, themes, entry point behavior, and corridor style.
 """
 
 import random
-from enum import Enum, auto
+from enum import auto
 from typing import Set, List
+from rosecrypt.enums import Tag
 
-class GenerationTag(Enum):
+class GenerationTag(Tag):
     """
     Enum representing tags that modify dungeon generation behavior.
 
@@ -18,16 +19,6 @@ class GenerationTag(Enum):
         category (str): Descriptive category of the tag (e.g., Room Size, Themes).
         data (Any): Optional data associated with the tag (e.g., size tuple or numeric value).
     """
-
-    def __new__(cls, category: str, data):
-        obj = object.__new__(cls)
-        obj._value_ = len(cls.__members__)  # <- ensure unique int value
-        obj.category = category
-        obj.data = data
-        return obj
-
-    def __str__(self):
-        return self.name
 
     @staticmethod
     def _generate_next_value_(name, start, count, last_values):
@@ -152,33 +143,6 @@ class GenerationTag(Enum):
                 GenerationTag.STRAIGHT, GenerationTag.MAZE
             }
         ]
-
-    @classmethod
-    def toggle_tag(
-        cls,
-        active_tags: Set['GenerationTag'],
-        new_tag: 'GenerationTag'
-        ) -> Set['GenerationTag']:
-        """
-        Adds or removes a tag, ensuring mutual exclusivity is respected.
-
-        Args:
-            active_tags (Set[GenerationTag]): Currently active tags.
-            new_tag (GenerationTag): The tag being toggled.
-
-        Returns:
-            Set[GenerationTag]: Updated set of tags with toggled state.
-        """
-
-        updated = set(active_tags)
-        if new_tag in updated:
-            updated.remove(new_tag)
-        else:
-            for group in cls.mutually_exclusive_groups():
-                if new_tag in group:
-                    updated -= group
-            updated.add(new_tag)
-        return updated
 
     @staticmethod
     def make_full_set() -> Set['GenerationTag']:
