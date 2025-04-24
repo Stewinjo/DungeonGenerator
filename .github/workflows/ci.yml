@@ -62,14 +62,17 @@ jobs:
 
       - name: Build executable with PyInstaller
         run: pyinstaller pyinstaller.spec
+
       - name: Get short commit hash
         id: vars
+        shell: bash
         run: echo "SHORT_SHA=${GITHUB_SHA::8}" >> $GITHUB_ENV
 
       - name: Rename executable with commit hash
+        shell: bash
         run: |
-          RENAMED_EXE="rosecrypt-windows-x64-${{ env.SHORT_SHA }}.exe"
-          mv dist/rosecrypt.exe "dist/$RENAMED_EXE"
+          RENAMED_EXE="rosecrypt-windows-x64-${SHORT_SHA}.exe"
+          mv dist/Rosecrypt.exe "dist/$RENAMED_EXE"
           echo "RENAMED_EXE=$RENAMED_EXE" >> $GITHUB_ENV
 
       - name: Upload artifact
